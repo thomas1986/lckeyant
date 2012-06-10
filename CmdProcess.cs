@@ -14,7 +14,7 @@ namespace LckeyAnt
 			if (args.Length > 0) {
 				string _argsStr = string.Empty;
 				for (int i = 0; i < args.Length; i++) {
-					_argsStr += args[i];
+					_argsStr += args[i]+" ";
 				}
 				try {
 					LogOutput.logConsoleNow("start process " + _argsStr);
