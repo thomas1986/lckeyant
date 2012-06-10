@@ -1,0 +1,190 @@
+﻿[ 2012-6-10 0:00:53 ] route finished
+[ 2012-6-10 0:00:53 ] concat finished
+[ 2012-6-10 0:00:53 ] delete finished
+[ 2012-6-10 0:00:53 ] concat finished
+[ 2012-6-10 0:00:53 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:00:53 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:00:54 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css 
+[ 2012-6-10 0:00:54 ] --cmd over--
+[ 2012-6-10 0:00:54 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:00:54 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:00:54 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\index.css  -o G:\ant_test\css\index.min.css 
+[ 2012-6-10 0:00:54 ] --cmd over--
+[ 2012-6-10 0:00:54 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:00:54 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:00:54 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css 
+[ 2012-6-10 0:00:55 ] --cmd over--
+[ 2012-6-10 0:00:55 ] compress finished
+[ 2012-6-10 0:00:55 ] route finished
+[ 2012-6-10 0:00:55 ] concat finished
+[ 2012-6-10 0:00:55 ] delete finished
+[ 2012-6-10 0:00:55 ] concat finished
+[ 2012-6-10 0:00:55 ] ********All command  finished!**********
+[ 2012-6-10 0:00:55 ] end   process - -build G:\ant_test\build.xml
+[ 2012-6-10 0:02:09 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-10 0:02:09 ] start read config info
+[ 2012-6-10 0:02:09 ] start read config info property
+[ 2012-6-10 0:02:09 ] end   read config info property
+[ 2012-6-10 0:02:09 ] start read config info target
+[ 2012-6-10 0:02:09 ] end   read config info target
+[ 2012-6-10 0:02:09 ] start read config info target
+[ 2012-6-10 0:02:09 ] end   read config info target
+[ 2012-6-10 0:02:09 ] end   read config info
+[ 2012-6-10 0:02:09 ] ********start  exec command **********
+[ 2012-6-10 0:02:09 ] route finished
+[ 2012-6-10 0:02:09 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:02:09 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:02:09 ] G:\ant_test>dirxxxx 
+[ 2012-6-10 0:02:09 ] --cmd over--
+[ 2012-6-10 0:02:09 ] command finished
+[ 2012-6-10 0:02:09 ] 
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Release>dir
+ 驱动器 G 中的卷是 doing
+ 卷的序列号是 9871-02E3
+
+ G:\Current_Project\winForm\build_project\build_project_bat\bin\Release 的目录
+
+2012-06-09  23:57    <DIR>          .
+2012-06-09  23:57    <DIR>          ..
+2012-06-09  23:57             1,789 lckeyAnt.application
+2012-06-09  23:57            45,056 lckeyAnt.exe
+2012-06-09  23:57             3,604 lckeyAnt.exe.manifest
+2012-06-09  23:57           132,608 lckeyAnt.pdb
+2012-06-09  23:57             1,789 lckeyAnt.vshost.application
+2012-06-09  23:51            14,328 lckeyAnt.vshost.exe
+2012-06-09  23:57    <DIR>          logs
+               6 个文件        199,174 字节
+               3 个目录 15,463,309,312 可用字节
+
+[ 2012-6-10 0:02:09 ] batch finished
+[ 2012-6-10 0:02:09 ] replace finished
+[ 2012-6-10 0:02:09 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:02:09 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:02:12 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_b.js  --js_output_file G:\ant_test\js\a_b_20120610000209.min.js 
+[ 2012-6-10 0:02:12 ] --cmd over--
+[ 2012-6-10 0:02:12 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:02:12 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:02:15 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_c.js  --js_output_file G:\ant_test\js\a_c_20120610000209.min.js 
+[ 2012-6-10 0:02:15 ] --cmd over--
+[ 2012-6-10 0:02:15 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:02:15 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:02:18 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\b_c.js  --js_output_file G:\ant_test\js\b_c_20120610000209.min.js 
+[ 2012-6-10 0:02:18 ] --cmd over--
+[ 2012-6-10 0:02:18 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:02:18 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:02:20 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\c.js  --js_output_file G:\ant_test\js\c_20120610000209.min.js 
+[ 2012-6-10 0:02:20 ] --cmd over--
+[ 2012-6-10 0:02:20 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:02:20 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:02:23 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a.js  --js_output_file G:\ant_test\js\a.min.js 
+[ 2012-6-10 0:02:23 ] --cmd over--
+[ 2012-6-10 0:02:23 ] compress finished
+[ 2012-6-10 0:02:32 ] route finished
+[ 2012-6-10 0:02:32 ] concat finished
+[ 2012-6-10 0:02:32 ] delete finished
+[ 2012-6-10 0:02:32 ] concat finished
+[ 2012-6-10 0:02:32 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:02:32 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:02:32 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css 
+[ 2012-6-10 0:02:32 ] --cmd over--
+[ 2012-6-10 0:02:32 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:02:32 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:02:33 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\index.css  -o G:\ant_test\css\index.min.css 
+[ 2012-6-10 0:02:33 ] --cmd over--
+[ 2012-6-10 0:02:33 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:02:33 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:02:33 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css 
+[ 2012-6-10 0:02:33 ] --cmd over--
+[ 2012-6-10 0:02:33 ] compress finished
+[ 2012-6-10 0:02:33 ] route finished
+[ 2012-6-10 0:02:34 ] concat finished
+[ 2012-6-10 0:02:34 ] delete finished
+[ 2012-6-10 0:02:34 ] concat finished
+[ 2012-6-10 0:02:34 ] ********All command  finished!**********
+[ 2012-6-10 0:02:34 ] end   process - -build G:\ant_test\build.xml
+
+*************************************************************************************
+[ 2012-6-10 0:15:43 ] Application start
+[ 2012-6-10 0:16:50 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-10 0:16:50 ] start read config info
+[ 2012-6-10 0:16:50 ] start read config info property
+[ 2012-6-10 0:16:50 ] end   read config info property
+[ 2012-6-10 0:16:50 ] start read config info target
+[ 2012-6-10 0:16:50 ] end   read config info target
+[ 2012-6-10 0:16:50 ] start read config info target
+[ 2012-6-10 0:16:50 ] end   read config info target
+[ 2012-6-10 0:16:50 ] end   read config info
+[ 2012-6-10 0:16:50 ] ********start  exec command **********
+[ 2012-6-10 0:16:51 ] route finished
+[ 2012-6-10 0:16:51 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:16:51 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:16:51 ] G:\ant_test>dirxxxx 
+[ 2012-6-10 0:16:51 ] --cmd over--
+[ 2012-6-10 0:16:51 ] command finished
+[ 2012-6-10 0:16:51 ] 
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Release>dir
+ 驱动器 G 中的卷是 doing
+ 卷的序列号是 9871-02E3
+
+ G:\Current_Project\winForm\build_project\build_project_bat\bin\Release 的目录
+
+2012-06-09  23:57    <DIR>          .
+2012-06-09  23:57    <DIR>          ..
+2012-06-10  00:15             1,789 lckeyAnt.application
+2012-06-10  00:15            45,056 lckeyAnt.exe
+2012-06-10  00:15             3,604 lckeyAnt.exe.manifest
+2012-06-10  00:15           132,608 lckeyAnt.pdb
+2012-06-10  00:15             1,789 lckeyAnt.vshost.application
+2012-06-10  00:10            14,328 lckeyAnt.vshost.exe
+2012-06-09  23:57    <DIR>          logs
+               6 个文件        199,174 字节
+               3 个目录 15,462,404,096 可用字节
+
+[ 2012-6-10 0:16:51 ] batch finished
+[ 2012-6-10 0:16:51 ] replace finished
+[ 2012-6-10 0:16:51 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:16:51 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:16:54 ] G:\ant_test>java -jar   G:\ant_test\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_b.js  --js_output_file G:\ant_test\js\a_b_20120610001650.min.js 
+[ 2012-6-10 0:16:54 ] --cmd over--
+[ 2012-6-10 0:16:54 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:16:54 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:16:57 ] G:\ant_test>java -jar   G:\ant_test\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_c.js  --js_output_file G:\ant_test\js\a_c_20120610001650.min.js 
+[ 2012-6-10 0:16:57 ] --cmd over--
+[ 2012-6-10 0:16:57 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:16:57 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:16:59 ] G:\ant_test>java -jar   G:\ant_test\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\b_c.js  --js_output_file G:\ant_test\js\b_c_20120610001650.min.js 
+[ 2012-6-10 0:16:59 ] --cmd over--
+[ 2012-6-10 0:17:00 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:17:00 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:17:02 ] G:\ant_test>java -jar   G:\ant_test\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\c.js  --js_output_file G:\ant_test\js\c_20120610001650.min.js 
+[ 2012-6-10 0:17:02 ] --cmd over--
+[ 2012-6-10 0:17:02 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:17:02 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:17:05 ] G:\ant_test>java -jar   G:\ant_test\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a.js  --js_output_file G:\ant_test\js\a.min.js 
+[ 2012-6-10 0:17:05 ] --cmd over--
+[ 2012-6-10 0:17:05 ] compress finished
+[ 2012-6-10 0:17:05 ] route finished
+[ 2012-6-10 0:17:05 ] concat finished
+[ 2012-6-10 0:17:05 ] delete finished
+[ 2012-6-10 0:17:05 ] concat finished
+[ 2012-6-10 0:17:05 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:17:05 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:17:06 ] G:\ant_test>java -jar   G:\ant_test\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css 
+[ 2012-6-10 0:17:06 ] --cmd over--
+[ 2012-6-10 0:17:06 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:17:06 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:17:06 ] G:\ant_test>java -jar   G:\ant_test\yuicompressor.jar  --charset utf8  G:\ant_test\index.css  -o G:\ant_test\css\index.min.css 
+[ 2012-6-10 0:17:06 ] --cmd over--
+[ 2012-6-10 0:17:06 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-10 0:17:06 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-10 0:17:07 ] G:\ant_test>java -jar   G:\ant_test\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css 
+[ 2012-6-10 0:17:07 ] --cmd over--
+[ 2012-6-10 0:17:07 ] compress finished
+[ 2012-6-10 0:17:07 ] route finished
+[ 2012-6-10 0:17:07 ] concat finished
+[ 2012-6-10 0:17:07 ] delete finished
+[ 2012-6-10 0:17:07 ] concat finished
+[ 2012-6-10 0:17:07 ] ********All command  finished!**********
+[ 2012-6-10 0:17:07 ] end   process - -build G:\ant_test\build.xml
+[ 2012-6-10 0:17:58 ] start process -- -?
+[ 2012-6-10 0:17:58 ] end   process -- -?

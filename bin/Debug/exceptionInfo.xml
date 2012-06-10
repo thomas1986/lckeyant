@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Exceptions>
+<Exception>
+<key>9001</key>
+<value>程序启动失败</value>
+</Exception>
+<Exception>
+<key>9999</key>
+<value>null</value>
+</Exception>
+</Exceptions>

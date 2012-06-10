@@ -1,0 +1,10 @@
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\lckeyAnt.exe.manifest
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\lckeyAnt.application
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\lckeyAnt.exe
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\lckeyAnt.pdb
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Debug\ResolveAssemblyReference.cache
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Debug\lckeyAnt.TrustInfo.xml
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Debug\lckeyAnt.exe.manifest
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Debug\lckeyAnt.application
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Debug\lckeyAnt.exe
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Debug\lckeyAnt.pdb

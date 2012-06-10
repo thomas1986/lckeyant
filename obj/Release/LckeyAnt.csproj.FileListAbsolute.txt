@@ -1,0 +1,10 @@
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Release\LckeyAnt.exe.manifest
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Release\LckeyAnt.application
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Release\LckeyAnt.exe
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Release\LckeyAnt.pdb
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Release\ResolveAssemblyReference.cache
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Release\LckeyAnt.TrustInfo.xml
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Release\LckeyAnt.exe.manifest
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Release\LckeyAnt.application
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Release\LckeyAnt.exe
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Release\LckeyAnt.pdb

@@ -1,0 +1,10 @@
+G:\Current_Project\winForm\build_project\build_project\build_project_bat\obj\Debug\ResolveAssemblyReference.cache
+G:\Current_Project\winForm\build_project\build_project\build_project_bat\bin\Debug\build_project_bat.exe
+G:\Current_Project\winForm\build_project\build_project\build_project_bat\bin\Debug\build_project_bat.pdb
+G:\Current_Project\winForm\build_project\build_project\build_project_bat\obj\Debug\build_project_bat.exe
+G:\Current_Project\winForm\build_project\build_project\build_project_bat\obj\Debug\build_project_bat.pdb
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\build_project_bat.exe
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\build_project_bat.pdb
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Debug\ResolveAssemblyReference.cache
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Debug\build_project_bat.exe
+G:\Current_Project\winForm\build_project\build_project_bat\obj\Debug\build_project_bat.pdb

@@ -1,0 +1,691 @@
+﻿[ 2012-6-9 16:27:28 ] start read config info
+#Exception : [ 2012-6-9 16:27:28 ] [ 9999 ] [ null ] 
+执行命令 - -build xx 出错：读取配置文件xx
+读取配置文件xx
+未能找到文件“G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\xx”。
+[ 2012-6-9 16:27:29 ] start read config info
+#Exception : [ 2012-6-9 16:27:29 ] [ 9999 ] [ null ] 
+执行命令 - -build xx 出错：读取配置文件xx
+读取配置文件xx
+未能找到文件“G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\xx”。
+[ 2012-6-9 16:27:30 ] start read config info
+#Exception : [ 2012-6-9 16:27:30 ] [ 9999 ] [ null ] 
+执行命令 - -build xx 出错：读取配置文件xx
+读取配置文件xx
+未能找到文件“G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\xx”。
+[ 2012-6-9 16:27:32 ] start read config info
+#Exception : [ 2012-6-9 16:27:32 ] [ 9999 ] [ null ] 
+执行命令 - -build xx 出错：读取配置文件xx
+读取配置文件xx
+未能找到文件“G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\xx”。
+[ 2012-6-9 16:27:34 ] start read config info
+#Exception : [ 2012-6-9 16:27:34 ] [ 9999 ] [ null ] 
+执行命令 - -build xx 出错：读取配置文件xx
+读取配置文件xx
+未能找到文件“G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\xx”。
+[ 2012-6-9 16:29:16 ] 
+
+
+
+[ 2012-6-9 16:29:16 ]  Application start 
+
+
+
+
+[ 2012-6-9 16:35:44 ]  Application start 
+[ 2012-6-9 16:35:48 ] start read config info
+#Exception : [ 2012-6-9 16:35:48 ] [ 9999 ] [ null ] 
+执行命令 - -build xx 出错：读取配置文件xx
+读取配置文件xx
+未能找到文件“G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\xx”。
+[ 2012-6-9 16:35:49 ] start read config info
+#Exception : [ 2012-6-9 16:35:49 ] [ 9999 ] [ null ] 
+执行命令 - -build xx 出错：读取配置文件xx
+读取配置文件xx
+未能找到文件“G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\xx”。
+[ 2012-6-9 16:35:50 ] start read config info
+#Exception : [ 2012-6-9 16:35:50 ] [ 9999 ] [ null ] 
+执行命令 - -build xx 出错：读取配置文件xx
+读取配置文件xx
+未能找到文件“G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\xx”。
+[ 2012-6-9 16:36:51 ] start read config info
+[ 2012-6-9 16:36:51 ] start read config info property
+[ 2012-6-9 16:36:51 ] end read config info property
+[ 2012-6-9 16:36:51 ] start read config info target
+[ 2012-6-9 16:36:51 ] end read config info target
+[ 2012-6-9 16:36:51 ] start read config info target
+[ 2012-6-9 16:36:51 ] end read config info target
+[ 2012-6-9 16:36:51 ] end read config info
+[ 2012-6-9 16:36:51 ] ********start to exec command **********
+[ 2012-6-9 16:36:51 ] route finished
+[ 2012-6-9 16:36:51 ] command finished
+[ 2012-6-9 16:36:51 ] batch finished
+[ 2012-6-9 16:36:51 ] replace finished
+[ 2012-6-9 16:37:05 ] compress finished
+[ 2012-6-9 16:37:05 ] route finished
+[ 2012-6-9 16:37:05 ] concat finished
+[ 2012-6-9 16:37:05 ] delete finished
+[ 2012-6-9 16:37:05 ] concat finished
+[ 2012-6-9 16:37:07 ] compress finished
+[ 2012-6-9 16:37:07 ] route finished
+[ 2012-6-9 16:37:07 ] concat finished
+[ 2012-6-9 16:37:07 ] delete finished
+[ 2012-6-9 16:37:07 ] concat finished
+[ 2012-6-9 16:37:07 ] ********All command  finished!**********
+[ 2012-6-9 16:38:19 ] start read config info
+[ 2012-6-9 16:38:19 ] start read config info property
+[ 2012-6-9 16:38:19 ] end read config info property
+[ 2012-6-9 16:38:19 ] start read config info target
+[ 2012-6-9 16:38:19 ] end read config info target
+[ 2012-6-9 16:38:19 ] start read config info target
+[ 2012-6-9 16:38:19 ] end read config info target
+[ 2012-6-9 16:38:19 ] end read config info
+[ 2012-6-9 16:38:19 ] ********start to exec command **********
+[ 2012-6-9 16:38:19 ] route finished
+[ 2012-6-9 16:38:19 ] command finished
+[ 2012-6-9 16:38:20 ] batch finished
+[ 2012-6-9 16:38:20 ] replace finished
+[ 2012-6-9 16:38:49 ] compress finished
+[ 2012-6-9 16:38:49 ] route finished
+[ 2012-6-9 16:38:49 ] concat finished
+[ 2012-6-9 16:38:49 ] delete finished
+[ 2012-6-9 16:38:49 ] concat finished
+[ 2012-6-9 16:38:51 ] compress finished
+[ 2012-6-9 16:38:51 ] route finished
+[ 2012-6-9 16:38:51 ] concat finished
+[ 2012-6-9 16:38:51 ] delete finished
+[ 2012-6-9 16:38:51 ] concat finished
+[ 2012-6-9 16:38:51 ] ********All command  finished!**********
+
+
+
+
+[ 2012-6-9 16:44:35 ]  Application start 
+[ 2012-6-9 16:44:41 ] start process - -build x
+[ 2012-6-9 16:44:41 ] start read config info
+#Exception : [ 2012-6-9 16:44:41 ] [ 9999 ] [ null ] 
+执行命令 - -build x 出错：读取配置文件x
+读取配置文件x
+未能找到文件“G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug\x”。
+[ 2012-6-9 16:46:41 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-9 16:46:41 ] start read config info
+[ 2012-6-9 16:46:41 ] start read config info property
+[ 2012-6-9 16:46:41 ] end read config info property
+[ 2012-6-9 16:46:41 ] start read config info target
+[ 2012-6-9 16:46:41 ] end read config info target
+[ 2012-6-9 16:46:41 ] start read config info target
+[ 2012-6-9 16:46:41 ] end read config info target
+[ 2012-6-9 16:46:41 ] end read config info
+[ 2012-6-9 16:46:41 ] ********start to exec command **********
+[ 2012-6-9 16:46:41 ] route finished
+[ 2012-6-9 16:46:41 ] command finished
+[ 2012-6-9 16:46:41 ] batch finished
+[ 2012-6-9 16:46:41 ] replace finished
+[ 2012-6-9 16:46:56 ] compress finished
+[ 2012-6-9 16:46:56 ] route finished
+[ 2012-6-9 16:46:56 ] concat finished
+[ 2012-6-9 16:46:56 ] delete finished
+[ 2012-6-9 16:46:56 ] concat finished
+[ 2012-6-9 16:46:58 ] compress finished
+[ 2012-6-9 16:46:58 ] route finished
+[ 2012-6-9 16:46:58 ] concat finished
+[ 2012-6-9 16:46:58 ] delete finished
+[ 2012-6-9 16:46:58 ] concat finished
+[ 2012-6-9 16:46:58 ] ********All command  finished!**********
+[ 2012-6-9 16:46:58 ] start process - -build G:\ant_test\build.xml
+
+
+
+
+[ 2012-6-9 17:00:28 ] Application start
+[ 2012-6-9 17:01:06 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-9 17:01:06 ] start read config info
+[ 2012-6-9 17:01:06 ] start read config info property
+[ 2012-6-9 17:01:06 ] end   read config info property
+[ 2012-6-9 17:01:06 ] start read config info target
+[ 2012-6-9 17:01:06 ] end   read config info target
+[ 2012-6-9 17:01:06 ] start read config info target
+[ 2012-6-9 17:01:06 ] end   read config info target
+[ 2012-6-9 17:01:06 ] end   read config info
+[ 2012-6-9 17:01:06 ] ********start  exec command **********
+[ 2012-6-9 17:01:06 ] route finished
+[ 2012-6-9 17:01:06 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:01:06 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:01:06 ] G:\ant_test>dirxxxx 
+[ 2012-6-9 17:01:06 ] --cmd over--
+[ 2012-6-9 17:01:06 ] command finished
+[ 2012-6-9 17:01:06 ] 
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug>dir
+ 驱动器 G 中的卷是 doing
+ 卷的序列号是 9871-02E3
+
+ G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug 的目录
+
+2012-06-09  02:23    <DIR>          .
+2012-06-09  02:23    <DIR>          ..
+2012-06-09  17:00            46,592 build_project_bat.exe
+2012-06-09  17:00           148,992 build_project_bat.pdb
+2012-06-09  16:47            14,328 build_project_bat.vshost.exe
+2007-07-21  01:33               490 build_project_bat.vshost.exe.manifest
+2012-06-08  18:34               228 exceptionInfo.xml
+2012-06-09  16:27    <DIR>          logs
+               5 个文件        210,630 字节
+               3 个目录 15,464,226,816 可用字节
+
+[ 2012-6-9 17:01:06 ] batch finished
+[ 2012-6-9 17:01:06 ] replace finished
+[ 2012-6-9 17:01:06 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:01:06 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:01:09 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_b.js  --js_output_file G:\ant_test\js\a_b.min.js 
+[ 2012-6-9 17:01:09 ] --cmd over--
+[ 2012-6-9 17:01:09 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:01:09 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:01:13 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_c.js  --js_output_file G:\ant_test\js\a_c.min.js 
+[ 2012-6-9 17:01:13 ] --cmd over--
+[ 2012-6-9 17:01:13 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:01:13 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:01:16 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\b_c.js  --js_output_file G:\ant_test\js\b_c.min.js 
+[ 2012-6-9 17:01:16 ] --cmd over--
+[ 2012-6-9 17:01:16 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:01:16 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:01:19 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\c.js  --js_output_file G:\ant_test\js\c.min.js 
+[ 2012-6-9 17:01:19 ] --cmd over--
+[ 2012-6-9 17:01:19 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:01:19 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:01:22 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a.js  --js_output_file G:\ant_test\js\a.min.js 
+[ 2012-6-9 17:01:22 ] --cmd over--
+[ 2012-6-9 17:01:22 ] compress finished
+[ 2012-6-9 17:01:22 ] route finished
+[ 2012-6-9 17:01:22 ] concat finished
+[ 2012-6-9 17:01:22 ] delete finished
+[ 2012-6-9 17:01:22 ] concat finished
+[ 2012-6-9 17:01:22 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:01:22 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:01:23 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css 
+[ 2012-6-9 17:01:23 ] --cmd over--
+[ 2012-6-9 17:01:23 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:01:23 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:01:23 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\index.css  -o G:\ant_test\css\index.min.css 
+[ 2012-6-9 17:01:23 ] --cmd over--
+[ 2012-6-9 17:01:23 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:01:23 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:01:24 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css 
+[ 2012-6-9 17:01:24 ] --cmd over--
+[ 2012-6-9 17:01:24 ] compress finished
+[ 2012-6-9 17:01:24 ] route finished
+[ 2012-6-9 17:01:24 ] concat finished
+[ 2012-6-9 17:01:24 ] delete finished
+[ 2012-6-9 17:01:24 ] concat finished
+[ 2012-6-9 17:01:24 ] ********All command  finished!**********
+[ 2012-6-9 17:01:24 ] end   process - -build G:\ant_test\build.xml
+[ 2012-6-9 17:07:58 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-9 17:07:58 ] start read config info
+[ 2012-6-9 17:07:58 ] start read config info property
+[ 2012-6-9 17:07:58 ] end   read config info property
+[ 2012-6-9 17:07:58 ] start read config info target
+[ 2012-6-9 17:07:58 ] end   read config info target
+[ 2012-6-9 17:07:58 ] start read config info target
+[ 2012-6-9 17:07:58 ] end   read config info target
+[ 2012-6-9 17:07:58 ] end   read config info
+[ 2012-6-9 17:07:58 ] ********start  exec command **********
+[ 2012-6-9 17:07:58 ] route finished
+[ 2012-6-9 17:08:43 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:08:52 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:09:39 ] G:\ant_test>dirxxxx 
+[ 2012-6-9 17:09:39 ] --cmd over--
+[ 2012-6-9 17:09:39 ] command finished
+[ 2012-6-9 17:09:39 ] 
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug>dir
+ 驱动器 G 中的卷是 doing
+ 卷的序列号是 9871-02E3
+
+ G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug 的目录
+
+2012-06-09  02:23    <DIR>          .
+2012-06-09  02:23    <DIR>          ..
+2012-06-09  17:00            46,592 build_project_bat.exe
+2012-06-09  17:00           148,992 build_project_bat.pdb
+2012-06-09  16:47            14,328 build_project_bat.vshost.exe
+2007-07-21  01:33               490 build_project_bat.vshost.exe.manifest
+2012-06-08  18:34               228 exceptionInfo.xml
+2012-06-09  16:27    <DIR>          logs
+               5 个文件        210,630 字节
+               3 个目录 15,464,222,720 可用字节
+
+[ 2012-6-9 17:09:39 ] batch finished
+[ 2012-6-9 17:09:39 ] replace finished
+[ 2012-6-9 17:09:44 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:09:44 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:09:47 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_b.js  --js_output_file G:\ant_test\js\a_b.min.js 
+[ 2012-6-9 17:09:47 ] --cmd over--
+[ 2012-6-9 17:09:47 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:09:47 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:09:50 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_c.js  --js_output_file G:\ant_test\js\a_c.min.js 
+[ 2012-6-9 17:09:50 ] --cmd over--
+[ 2012-6-9 17:09:50 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:09:50 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:09:53 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\b_c.js  --js_output_file G:\ant_test\js\b_c.min.js 
+[ 2012-6-9 17:09:53 ] --cmd over--
+[ 2012-6-9 17:09:53 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:09:53 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:09:56 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\c.js  --js_output_file G:\ant_test\js\c.min.js 
+[ 2012-6-9 17:09:56 ] --cmd over--
+[ 2012-6-9 17:09:56 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:09:56 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:09:59 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a.js  --js_output_file G:\ant_test\js\a.min.js 
+[ 2012-6-9 17:09:59 ] --cmd over--
+[ 2012-6-9 17:09:59 ] compress finished
+[ 2012-6-9 17:09:59 ] route finished
+[ 2012-6-9 17:09:59 ] concat finished
+[ 2012-6-9 17:09:59 ] delete finished
+[ 2012-6-9 17:09:59 ] concat finished
+[ 2012-6-9 17:09:59 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:09:59 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:09:59 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css 
+[ 2012-6-9 17:09:59 ] --cmd over--
+[ 2012-6-9 17:10:00 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:10:00 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:10:00 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\index.css  -o G:\ant_test\css\index.min.css 
+[ 2012-6-9 17:10:00 ] --cmd over--
+[ 2012-6-9 17:10:00 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:10:00 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:10:00 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css 
+[ 2012-6-9 17:10:00 ] --cmd over--
+[ 2012-6-9 17:10:00 ] compress finished
+[ 2012-6-9 17:10:01 ] route finished
+[ 2012-6-9 17:10:01 ] concat finished
+[ 2012-6-9 17:10:01 ] delete finished
+[ 2012-6-9 17:10:01 ] concat finished
+[ 2012-6-9 17:10:01 ] ********All command  finished!**********
+[ 2012-6-9 17:10:01 ] end   process - -build G:\ant_test\build.xml
+[ 2012-6-9 17:11:34 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-9 17:11:34 ] start read config info
+[ 2012-6-9 17:11:34 ] start read config info property
+[ 2012-6-9 17:11:34 ] end   read config info property
+[ 2012-6-9 17:11:34 ] start read config info target
+[ 2012-6-9 17:11:34 ] end   read config info target
+[ 2012-6-9 17:11:34 ] start read config info target
+[ 2012-6-9 17:11:34 ] end   read config info target
+[ 2012-6-9 17:11:34 ] end   read config info
+[ 2012-6-9 17:11:34 ] ********start  exec command **********
+[ 2012-6-9 17:11:34 ] route finished
+[ 2012-6-9 17:12:08 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:12:08 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:12:08 ] G:\ant_test>dirxxxx 
+[ 2012-6-9 17:12:08 ] --cmd over--
+[ 2012-6-9 17:12:08 ] command finished
+[ 2012-6-9 17:12:08 ] 
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug>dir
+ 驱动器 G 中的卷是 doing
+ 卷的序列号是 9871-02E3
+
+ G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug 的目录
+
+2012-06-09  02:23    <DIR>          .
+2012-06-09  02:23    <DIR>          ..
+2012-06-09  17:00            46,592 build_project_bat.exe
+2012-06-09  17:00           148,992 build_project_bat.pdb
+2012-06-09  16:47            14,328 build_project_bat.vshost.exe
+2007-07-21  01:33               490 build_project_bat.vshost.exe.manifest
+2012-06-08  18:34               228 exceptionInfo.xml
+2012-06-09  16:27    <DIR>          logs
+               5 个文件        210,630 字节
+               3 个目录 15,464,214,528 可用字节
+
+[ 2012-6-9 17:12:08 ] batch finished
+[ 2012-6-9 17:12:08 ] replace finished
+[ 2012-6-9 17:12:09 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:12:09 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:12:12 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_b.js  --js_output_file G:\ant_test\js\a_b.min.js 
+[ 2012-6-9 17:12:12 ] --cmd over--
+[ 2012-6-9 17:12:14 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:12:14 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:12:17 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_c.js  --js_output_file G:\ant_test\js\a_c.min.js 
+[ 2012-6-9 17:12:17 ] --cmd over--
+[ 2012-6-9 17:12:17 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:12:17 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+
+
+
+
+[ 2012-6-9 17:12:48 ] Application start
+[ 2012-6-9 17:13:03 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-9 17:13:03 ] start read config info
+[ 2012-6-9 17:13:03 ] start read config info property
+[ 2012-6-9 17:13:03 ] end   read config info property
+[ 2012-6-9 17:13:03 ] start read config info target
+[ 2012-6-9 17:13:04 ] end   read config info target
+[ 2012-6-9 17:13:04 ] start read config info target
+[ 2012-6-9 17:13:04 ] end   read config info target
+[ 2012-6-9 17:13:04 ] end   read config info
+[ 2012-6-9 17:13:04 ] ********start  exec command **********
+[ 2012-6-9 17:13:04 ] route finished
+[ 2012-6-9 17:13:04 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 17:13:04 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 17:13:04 ] G:\ant_test>dirxxxx 
+[ 2012-6-9 17:13:33 ] --cmd over--
+
+
+
+
+[ 2012-6-9 17:15:18 ] Application start
+[ 2012-6-9 17:15:39 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-9 17:15:39 ] start read config info
+[ 2012-6-9 17:15:39 ] start read config info property
+[ 2012-6-9 17:15:39 ] end   read config info property
+[ 2012-6-9 17:15:39 ] start read config info target
+[ 2012-6-9 17:15:39 ] end   read config info target
+[ 2012-6-9 17:15:39 ] start read config info target
+[ 2012-6-9 17:15:39 ] end   read config info target
+[ 2012-6-9 17:15:39 ] end   read config info
+[ 2012-6-9 17:15:39 ] ********start  exec command **********
+[ 2012-6-9 17:15:39 ] route finished
+
+
+
+
+[ 2012-6-9 17:17:11 ] Application start
+[ 2012-6-9 17:17:23 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-9 17:17:23 ] start read config info
+[ 2012-6-9 17:17:23 ] start read config info property
+[ 2012-6-9 17:17:23 ] end   read config info property
+[ 2012-6-9 17:17:23 ] start read config info target
+[ 2012-6-9 17:17:23 ] end   read config info target
+[ 2012-6-9 17:17:23 ] start read config info target
+[ 2012-6-9 17:17:23 ] end   read config info target
+[ 2012-6-9 17:17:23 ] end   read config info
+[ 2012-6-9 17:17:23 ] ********start  exec command **********
+[ 2012-6-9 17:17:23 ] route finished
+[ 2012-6-9 17:17:37 ] Microsoft Windows XP [版本 5.1.2600]
+(C) 版权所有 1985-2001 Microsoft Corp.
+
+G:\ant_test>dirxxxx
+
+G:\ant_test>exit
+
+[ 2012-6-9 17:17:39 ] --cmd over--
+[ 2012-6-9 17:17:39 ] command finished
+[ 2012-6-9 17:17:39 ] 
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug>dir
+ 驱动器 G 中的卷是 doing
+ 卷的序列号是 9871-02E3
+
+ G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug 的目录
+
+2012-06-09  02:23    <DIR>          .
+2012-06-09  02:23    <DIR>          ..
+2012-06-09  17:17            46,592 build_project_bat.exe
+2012-06-09  17:17           148,992 build_project_bat.pdb
+2012-06-09  17:16            14,328 build_project_bat.vshost.exe
+2007-07-21  01:33               490 build_project_bat.vshost.exe.manifest
+2012-06-08  18:34               228 exceptionInfo.xml
+2012-06-09  16:27    <DIR>          logs
+               5 个文件        210,630 字节
+               3 个目录 15,464,210,432 可用字节
+
+[ 2012-6-9 17:17:39 ] batch finished
+[ 2012-6-9 17:17:39 ] replace finished
+[ 2012-6-9 17:17:43 ] Microsoft Windows XP [版本 5.1.2600]
+(C) 版权所有 1985-2001 Microsoft Corp.
+
+G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_b.js  --js_output_file G:\ant_test\js\a_b.min.js
+
+G:\ant_test>exit
+
+[ 2012-6-9 17:17:43 ] --cmd over--
+[ 2012-6-9 17:17:46 ] Microsoft Windows XP [版本 5.1.2600]
+(C) 版权所有 1985-2001 Microsoft Corp.
+
+G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_c.js  --js_output_file G:\ant_test\js\a_c.min.js
+
+G:\ant_test>exit
+
+[ 2012-6-9 17:17:46 ] --cmd over--
+[ 2012-6-9 17:17:49 ] Microsoft Windows XP [版本 5.1.2600]
+(C) 版权所有 1985-2001 Microsoft Corp.
+
+G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\b_c.js  --js_output_file G:\ant_test\js\b_c.min.js
+
+G:\ant_test>exit
+
+[ 2012-6-9 17:17:49 ] --cmd over--
+[ 2012-6-9 17:17:52 ] Microsoft Windows XP [版本 5.1.2600]
+(C) 版权所有 1985-2001 Microsoft Corp.
+
+G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\c.js  --js_output_file G:\ant_test\js\c.min.js
+
+G:\ant_test>exit
+
+[ 2012-6-9 17:17:52 ] --cmd over--
+[ 2012-6-9 17:17:55 ] Microsoft Windows XP [版本 5.1.2600]
+(C) 版权所有 1985-2001 Microsoft Corp.
+
+G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a.js  --js_output_file G:\ant_test\js\a.min.js
+
+G:\ant_test>exit
+
+[ 2012-6-9 17:17:55 ] --cmd over--
+[ 2012-6-9 17:17:55 ] compress finished
+[ 2012-6-9 17:17:56 ] route finished
+[ 2012-6-9 17:17:56 ] concat finished
+[ 2012-6-9 17:17:56 ] delete finished
+[ 2012-6-9 17:17:56 ] concat finished
+[ 2012-6-9 17:17:56 ] Microsoft Windows XP [版本 5.1.2600]
+(C) 版权所有 1985-2001 Microsoft Corp.
+
+G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css
+
+G:\ant_test>exit
+
+[ 2012-6-9 17:17:56 ] --cmd over--
+[ 2012-6-9 17:17:57 ] Microsoft Windows XP [版本 5.1.2600]
+(C) 版权所有 1985-2001 Microsoft Corp.
+
+G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\index.css  -o G:\ant_test\css\index.min.css
+
+G:\ant_test>exit
+
+[ 2012-6-9 17:17:57 ] --cmd over--
+[ 2012-6-9 17:17:57 ] Microsoft Windows XP [版本 5.1.2600]
+(C) 版权所有 1985-2001 Microsoft Corp.
+
+G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css
+
+G:\ant_test>exit
+
+[ 2012-6-9 17:17:57 ] --cmd over--
+[ 2012-6-9 17:17:57 ] compress finished
+[ 2012-6-9 17:17:57 ] route finished
+[ 2012-6-9 17:17:57 ] concat finished
+[ 2012-6-9 17:17:57 ] delete finished
+[ 2012-6-9 17:17:57 ] concat finished
+[ 2012-6-9 17:17:57 ] ********All command  finished!**********
+[ 2012-6-9 17:17:57 ] end   process - -build G:\ant_test\build.xml
+
+
+
+
+[ 2012-6-9 17:21:15 ] Application start
+[ 2012-6-9 17:21:41 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-9 17:21:41 ] start read config info
+[ 2012-6-9 17:21:41 ] start read config info property
+[ 2012-6-9 17:21:41 ] end   read config info property
+[ 2012-6-9 17:21:41 ] start read config info target
+[ 2012-6-9 17:21:41 ] end   read config info target
+[ 2012-6-9 17:21:41 ] start read config info target
+[ 2012-6-9 17:21:41 ] end   read config info target
+[ 2012-6-9 17:21:41 ] end   read config info
+[ 2012-6-9 17:21:41 ] ********start  exec command **********
+[ 2012-6-9 17:21:41 ] route finished
+
+
+
+
+[ 2012-6-9 18:06:02 ] Application start
+[ 2012-6-9 18:06:14 ] start process - -
+[ 2012-6-9 18:06:14 ] end   process - -
+
+
+
+
+[ 2012-6-9 18:12:20 ] Application start
+[ 2012-6-9 18:12:23 ] start process - -
+[ 2012-6-9 18:12:23 ] end   process - -
+[ 2012-6-9 18:12:45 ] start process - -
+[ 2012-6-9 18:12:45 ] end   process - -
+
+
+
+
+[ 2012-6-9 18:13:27 ] Application start
+[ 2012-6-9 18:13:31 ] start process - -？
+[ 2012-6-9 18:13:31 ] end   process - -？
+
+
+
+
+[ 2012-6-9 18:58:30 ] Application start
+[ 2012-6-9 18:58:42 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-9 18:58:42 ] start read config info
+[ 2012-6-9 18:58:42 ] start read config info property
+[ 2012-6-9 18:58:42 ] end   read config info property
+[ 2012-6-9 18:58:42 ] start read config info target
+[ 2012-6-9 18:58:42 ] end   read config info target
+[ 2012-6-9 18:58:42 ] start read config info target
+[ 2012-6-9 18:58:42 ] end   read config info target
+[ 2012-6-9 18:58:42 ] end   read config info
+[ 2012-6-9 18:58:42 ] ********start  exec command **********
+[ 2012-6-9 18:58:43 ] route finished
+[ 2012-6-9 18:58:43 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 18:58:43 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 18:58:43 ] G:\ant_test>dirxxxx 
+[ 2012-6-9 18:58:43 ] --cmd over--
+[ 2012-6-9 18:58:43 ] command finished
+[ 2012-6-9 18:58:43 ] 
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug>dir
+ 驱动器 G 中的卷是 doing
+ 卷的序列号是 9871-02E3
+
+ G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug 的目录
+
+2012-06-09  02:23    <DIR>          .
+2012-06-09  02:23    <DIR>          ..
+2012-06-09  18:58            48,640 build_project_bat.exe
+2012-06-09  18:58           151,040 build_project_bat.pdb
+2012-06-09  18:14            14,328 build_project_bat.vshost.exe
+2007-07-21  01:33               490 build_project_bat.vshost.exe.manifest
+2012-06-08  18:34               228 exceptionInfo.xml
+2012-06-09  16:27    <DIR>          logs
+               5 个文件        214,726 字节
+               3 个目录 15,464,202,240 可用字节
+
+[ 2012-6-9 18:58:43 ] batch finished
+[ 2012-6-9 18:58:43 ] replace finished
+#Exception : [ 2012-6-9 18:58:43 ] [ 9999 ] [ null ] 
+执行命令 - -build G:\ant_test\build.xml 出错：不支持给定路径的格式。
+不支持给定路径的格式。
+[ 2012-6-9 19:00:31 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-9 19:00:31 ] start read config info
+
+
+
+
+[ 2012-6-9 19:14:34 ] Application start
+[ 2012-6-9 19:14:45 ] start process - -build G:\ant_test\build.xm
+[ 2012-6-9 19:14:45 ] start read config info
+#Exception : [ 2012-6-9 19:14:45 ] [ 9999 ] [ null ] 
+执行命令 - -build G:\ant_test\build.xm 出错：读取配置文件G:\ant_test\build.xm
+读取配置文件G:\ant_test\build.xm
+未能找到文件“G:\ant_test\build.xm”。
+[ 2012-6-9 19:14:47 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-9 19:14:47 ] start read config info
+
+
+
+
+[ 2012-6-9 19:17:32 ] Application start
+[ 2012-6-9 19:17:43 ] start process - -build G:\ant_test\build.xml
+[ 2012-6-9 19:17:43 ] start read config info
+[ 2012-6-9 19:17:43 ] start read config info property
+[ 2012-6-9 19:17:43 ] end   read config info property
+[ 2012-6-9 19:17:43 ] start read config info target
+[ 2012-6-9 19:17:43 ] end   read config info target
+[ 2012-6-9 19:17:43 ] start read config info target
+[ 2012-6-9 19:17:43 ] end   read config info target
+[ 2012-6-9 19:17:43 ] end   read config info
+[ 2012-6-9 19:17:43 ] ********start  exec command **********
+[ 2012-6-9 19:17:43 ] route finished
+[ 2012-6-9 19:17:44 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 19:17:44 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 19:17:44 ] G:\ant_test>dirxxxx 
+[ 2012-6-9 19:17:44 ] --cmd over--
+[ 2012-6-9 19:17:44 ] command finished
+[ 2012-6-9 19:17:44 ] 
+G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug>dir
+ 驱动器 G 中的卷是 doing
+ 卷的序列号是 9871-02E3
+
+ G:\Current_Project\winForm\build_project\build_project_bat\bin\Debug 的目录
+
+2012-06-09  02:23    <DIR>          .
+2012-06-09  02:23    <DIR>          ..
+2012-06-09  19:17            48,640 build_project_bat.exe
+2012-06-09  19:17           151,040 build_project_bat.pdb
+2012-06-09  19:16            14,328 build_project_bat.vshost.exe
+2007-07-21  01:33               490 build_project_bat.vshost.exe.manifest
+2012-06-08  18:34               228 exceptionInfo.xml
+2012-06-09  16:27    <DIR>          logs
+               5 个文件        214,726 字节
+               3 个目录 15,464,198,144 可用字节
+
+[ 2012-6-9 19:17:44 ] batch finished
+[ 2012-6-9 19:17:44 ] replace finished
+[ 2012-6-9 19:17:44 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 19:17:44 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 19:17:47 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_b.js  --js_output_file G:\ant_test\js\a_b_20120609191743.min.js 
+[ 2012-6-9 19:17:47 ] --cmd over--
+[ 2012-6-9 19:17:47 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 19:17:47 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 19:17:49 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a_c.js  --js_output_file G:\ant_test\js\a_c_20120609191743.min.js 
+[ 2012-6-9 19:17:49 ] --cmd over--
+[ 2012-6-9 19:17:49 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 19:17:49 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 19:17:52 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\b_c.js  --js_output_file G:\ant_test\js\b_c_20120609191743.min.js 
+[ 2012-6-9 19:17:52 ] --cmd over--
+[ 2012-6-9 19:17:52 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 19:17:52 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 19:17:55 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\c.js  --js_output_file G:\ant_test\js\c_20120609191743.min.js 
+[ 2012-6-9 19:17:55 ] --cmd over--
+[ 2012-6-9 19:17:55 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 19:17:55 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 19:17:58 ] G:\ant_test>java -jar   F:\Install\GoogleClosureCompiler\compiler.jar  --charset utf8   --warning_level  QUIET  --js G:\ant_test\a.js  --js_output_file G:\ant_test\js\a.min.js 
+[ 2012-6-9 19:17:58 ] --cmd over--
+[ 2012-6-9 19:17:58 ] compress finished
+[ 2012-6-9 19:17:58 ] route finished
+[ 2012-6-9 19:17:58 ] concat finished
+[ 2012-6-9 19:17:58 ] delete finished
+[ 2012-6-9 19:17:58 ] concat finished
+[ 2012-6-9 19:17:58 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 19:17:58 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 19:17:59 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css 
+[ 2012-6-9 19:17:59 ] --cmd over--
+[ 2012-6-9 19:17:59 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 19:17:59 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 19:17:59 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\index.css  -o G:\ant_test\css\index.min.css 
+[ 2012-6-9 19:17:59 ] --cmd over--
+[ 2012-6-9 19:17:59 ] Microsoft Windows XP [版本 5.1.2600] 
+[ 2012-6-9 19:17:59 ] (C) 版权所有 1985-2001 Microsoft Corp. 
+[ 2012-6-9 19:18:00 ] G:\ant_test>java -jar   F:\Install\YuiCompressor\yuicompressor.jar  --charset utf8  G:\ant_test\a.css  -o G:\ant_test\css\a.min.css 
+[ 2012-6-9 19:18:00 ] --cmd over--
+[ 2012-6-9 19:18:00 ] compress finished
+[ 2012-6-9 19:18:00 ] route finished
+[ 2012-6-9 19:18:00 ] concat finished
+[ 2012-6-9 19:18:00 ] delete finished
+[ 2012-6-9 19:18:00 ] concat finished
+[ 2012-6-9 19:18:00 ] ********All command  finished!**********
+[ 2012-6-9 19:18:00 ] end   process - -build G:\ant_test\build.xml
+
+
+
+
+[ 2012-6-9 23:33:43 ] Application start
