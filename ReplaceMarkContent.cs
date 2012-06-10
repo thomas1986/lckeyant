@@ -35,8 +35,9 @@ namespace LckeyAnt
 			}
 			return content;
 		}
+
 		/// <summary>
-		/// 写入指定路径文件的内容
+		/// 写入内容到指定路径的文件
 		/// </summary>
 		/// <param name="filePath"></param>
 		/// <param name="newContent"></param>
@@ -106,7 +107,7 @@ namespace LckeyAnt
 				}
 				 * */
 				#endregion
-				
+
 			} catch (Exception ex) {
 				throw ex;
 			}
@@ -131,6 +132,51 @@ namespace LckeyAnt
 			return sourceContent;
 		}
 
+		#region 供外部调用的替换方法
+
+		/// <summary>
+		/// 根据路径替换start,end之间内容(供外部直接调用方法)
+		/// </summary>
+		/// <param name="targetPath"></param>
+		/// <param name="outputencoding"></param>
+		/// <param name="start"></param>
+		/// <param name="end"></param>
+		/// <param name="sourcePath"></param>
+		/// <param name="encoding"></param>
+		public static void replaceTargetMarkNoteBySourceFile(string targetPath, string outputencoding, string start, string end, string sourcePath, string encoding) {
+			try {
+				string target = readFileContent(targetPath, outputencoding);
+				string source = readFileContent(sourcePath, encoding);
+				target = replaceMarkNoteContent(target, start, end, source);
+				writeFileContent(targetPath, target, outputencoding, false);
+			} catch (Exception ex) {
+				throw new LogException("根据路径替换start,end之间内容", ex);
+			}
+
+		}
+		/// <summary>
+		/// 根据路径替换oldMark内容(供外部直接调用方法)
+		/// </summary>
+		/// <param name="targetPath"></param>
+		/// <param name="outputencoding"></param>
+		/// <param name="oldMark"></param>
+		/// <param name="sourcePath"></param>
+		/// <param name="encoding"></param>
+		public static void replaceTargetMarkBySourceFile(string targetPath, string outputencoding, string oldMark, string sourcePath, string encoding) {
+			try {
+				string target = readFileContent(targetPath, outputencoding);
+				string source = readFileContent(sourcePath, encoding);
+				target = replaceMarkContent(target, oldMark, source);
+				writeFileContent(targetPath, target, outputencoding, false);
+			} catch (Exception ex) {
+				throw new LogException("根据路径替换oldMark内容", ex);
+			}
+
+		}
+
+		#endregion
+
+		#region news copy
 		/// <summary>
 		/// 一次打开文件，替换所有
 		/// </summary>
@@ -214,6 +260,6 @@ namespace LckeyAnt
 			}
 			return Flage;
 		}
-
+		#endregion
 	}
 }

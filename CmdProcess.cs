@@ -85,6 +85,7 @@ namespace LckeyAnt
 							string args2 = args.Length < 3 ? string.Empty : args[2];
 							confAccess.execByConfigInfo(confAccess.getConfigInfo(args[1], args2));
 							break;
+
 						#region route
 						case "route_page_srcs2target":
 							//currentPage,srcs,target,rootPath,encoding,outputencoding
@@ -116,18 +117,35 @@ namespace LckeyAnt
 							break;
 						#endregion
 
+						#region concat
 						case "concat_all":
+							//拼接args1的所有链接到目标
 							//(string concatUriDetail, string encoding, string outputencoding
 							ConcatFile.concatFilesByUriDetail(args[1], args[2], args[3]);
 							break;
 						case "concat":
+							//拼接args1到args2
 							//string sourceFilePath, string targetFilePath, string encoding, string outputEncoding
 							ConcatFile.concatFileSource2Target(args[1], args[2], args[3], args[4]);
 							break;
-						case "replace":
-							Console.WriteLine("none...");
+						#endregion
+
+						#region replace
+						case "replace_mark":
+							//根据文件路径的所有内容替换文件内mark的内容
+							//(待替换文件路径,带替换文件编码格式,mark的值,来源内容文件路径,来源内容文件编码)
+							ReplaceMarkContent.replaceTargetMarkBySourceFile(args[1], args[2], args[3], args[4], args[5]);
 							break;
+						case "replace_start_end":
+							//根据文件路径的所有内容替换文件内start-end之间的内容
+							//(待替换文件路径,带替换文件编码格式,start标记的值,end标记的值,来源内容文件路径,来源内容文件编码)
+							ReplaceMarkContent.replaceTargetMarkNoteBySourceFile(args[1], args[2], args[3], args[4], args[5], args[6]);
+							break;
+						#endregion
+
+						#region delete
 						case "delete":
+							//删除传入的所有路径文件
 							//arg1...argN...
 							int len = args.Length;
 							for (int i = 0; i < len; i++) {
@@ -138,6 +156,8 @@ namespace LckeyAnt
 								}
 							}
 							break;
+						#endregion
+
 						case "?":
 							//帮助
 							string arg1 = string.Empty;
@@ -181,25 +201,29 @@ namespace LckeyAnt
 			switch (helpBranch) {
 				case "all":
 					Console.WriteLine("* [根据xml执行所有]");
-					Console.WriteLine("* -exec xmlpath rootpath  ");
+					Console.WriteLine("* lckeyant -exec xmlpath rootpath  ");
 					Console.WriteLine("* [合并当前页面中的srcs路径引用(js,css)为target路径]：");
-					Console.WriteLine("* -route_page_srcs2target currentPage srcs target rootPath encoding outputencoding ");
+					Console.WriteLine("* lckeyant -route_page_srcs2target currentPage srcs target rootPath encoding outputencoding ");
 					Console.WriteLine("* [合并当前页面中的多种srcs路径引用(js,css)为对应的多个target路径]：");
-					Console.WriteLine("* -route_page_srcs2targets currentPage combineFiles encoding outputencoding ");
+					Console.WriteLine("* lckeyant -route_page_srcs2targets currentPage combineFiles encoding outputencoding ");
 					Console.WriteLine("* [多页面对多(js,css)=>多target个的(js,css)]：");
-					Console.WriteLine("* -route_pages_srcs2targets htmlPageFiles combineFiles encoding outputencoding ");
+					Console.WriteLine("* lckeyant -route_pages_srcs2targets htmlPageFiles combineFiles encoding outputencoding ");
 					Console.WriteLine("* [传入阐述batArgs到fileName的bat文件执行批处理任务]：");
-					Console.WriteLine("* -bat fileName batArgs");
+					Console.WriteLine("* lckeyant -bat fileName batArgs");
 					Console.WriteLine("* [在工作目录workDir内执行cmdStr命令]：");
-					Console.WriteLine("* -cmd workDir cmdStr ");
+					Console.WriteLine("* lckeyant -cmd workDir cmdStr ");
 					Console.WriteLine("* [传入参数args执行可执行命令如ie.exe]：");
-					Console.WriteLine("* -run execName args ");
+					Console.WriteLine("* lckeyant -run execName args ");
 					Console.WriteLine("* [拼接多个文件内容,读取编码，输出编码格式]：");
-					Console.WriteLine("* -concat_all combineFiles encoding outputencoding ");
+					Console.WriteLine("* lckeyant -concat_all combineFiles encoding outputencoding ");
 					Console.WriteLine("* [将源目录文件内容追加到目标文件中]：");
-					Console.WriteLine("* -concat sourceFilePath targetFilePath  encoding  outputEncoding  ");
+					Console.WriteLine("* lckeyant -concat sourceFilePath targetFilePath  encoding  outputEncoding  ");
 					Console.WriteLine("* [删除arg1-N文件,可以相对于工作根目录的路径]：");
-					Console.WriteLine("* -delete arg1 arg2 ...  argN  ");
+					Console.WriteLine("* lckeyant -delete arg1 arg2 ...  argN  ");
+					Console.WriteLine("* [替换targetPath文件的oldMark值为sourcePath的内容]：");
+					Console.WriteLine("* lckeyant -replace_mark targetPath  outputencoding oldMark sourcePath encoding");
+					Console.WriteLine("* [替换targetPath文件的start与end之间的值为sourcePath的内容]：");
+					Console.WriteLine("* lckeyant -replace_start_end targetPath  outputencoding start end sourcePath encoding");
 
 					//提示信息
 					Console.WriteLine("* ------参数example--------");

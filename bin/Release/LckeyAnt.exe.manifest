@@ -51,14 +51,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LckeyAnt.exe" size="45056">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LckeyAnt.exe" size="46080">
       <assemblyIdentity name="LckeyAnt" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>RVmvzy9o1qfFi96zjfApDFyas2Y=</dsig:DigestValue>
+        <dsig:DigestValue>eE4Jy5TnPf627dp+bqrAv+vl20U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
