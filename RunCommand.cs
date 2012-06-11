@@ -76,9 +76,54 @@ namespace LckeyAnt
 			p.StartInfo.WorkingDirectory = workDir;//@"E:\";
 			//p.StartInfo.Arguments = args;//传入bat的参数
 			p.StartInfo.LoadUserProfile = false;
-			p.Start();			
+			p.Start();
 			//输出到命令行
 			p.StandardInput.WriteLine(cmdStr);
+			p.StandardInput.WriteLine("exit");
+			//捕获不到类似 dirxxx的错误信息
+			//string ret = p.StandardOutput.ReadToEnd(); //获取返回值
+			//LogOutput.logConsoleNow(ret);			
+			/* 按行获取返回值 */
+			string line = p.StandardOutput.ReadLine();//每次读取一行
+			while (!p.StandardOutput.EndOfStream) {
+				if (line != string.Empty) {
+					LogOutput.logConsoleNow(line + " ");
+				}
+				line = p.StandardOutput.ReadLine();
+			}
+			p.WaitForExit();
+			p.Close();
+			LogOutput.logConsoleNow("--cmd over--");
+		}
+
+		/// <summary>
+		/// 使用cmd环境执行命令，同步执行一句传入命令
+		/// </summary>
+		/// http://www.cnblogs.com/wucg/archive/2012/03/16/2399980.html
+		/// <param name="workDir"></param>
+		/// <param name="cmdStr"></param>
+		public static void callCmdSync(string workDir, List<string> cmdList) {
+			System.Diagnostics.Process p = new System.Diagnostics.Process();
+			p.EnableRaisingEvents = false;
+			p.StartInfo.UseShellExecute = false;
+			p.StartInfo.CreateNoWindow = false;//true
+			p.StartInfo.RedirectStandardInput = true;
+			p.StartInfo.RedirectStandardOutput = true;
+			p.StartInfo.FileName = "cmd.exe"; //fileName;
+			p.StartInfo.WorkingDirectory = workDir;//@"E:\";
+			//p.StartInfo.Arguments = args;//传入bat的参数
+			p.StartInfo.LoadUserProfile = false;
+			p.Start();
+			LogOutput.logConsole("pause  会被主动过滤掉，会引起下面传入参数错误");
+			//输出到命令行
+			foreach (string cmdStr in cmdList) {
+				LogOutput.logConsole(cmdStr);
+				//过滤掉pause情况，会引起下面传入错误
+				if (cmdStr.ToLower() != "pause") {
+					p.StandardInput.WriteLine(cmdStr);
+					p.StandardInput.Flush();
+				}
+			}
 			p.StandardInput.WriteLine("exit");
 			//捕获不到类似 dirxxx的错误信息
 			//string ret = p.StandardOutput.ReadToEnd(); //获取返回值

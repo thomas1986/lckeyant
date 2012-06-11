@@ -14,7 +14,7 @@ namespace LckeyAnt
 	public class Object2StringCmd
 	{
 		#region exec 方法接口,执行单个配置文件节点
-		
+
 		/// <summary>
 		/// 执行route merge命令，替换页面中多个src地址 为合并后的1个src地址
 		/// </summary>
@@ -167,16 +167,18 @@ namespace LckeyAnt
 			try {
 				string workDir = confTarCommand.WorkDir;
 				List<string> cmdList = confTarCommand.CommandList;
-				foreach (string cmd in cmdList) {
+				/*foreach (string cmd in cmdList) {
 					RunCommand.callCmdSync(workDir, cmd);
-				}
+				}*/
+				//可以在配置文件中按顺序写入命令，会一起执行，并获取上下文环境
+				RunCommand.callCmdSync(workDir, cmdList);
 				return true;
 			} catch (Exception ex) {
 				throw ex;
 				return false;
 			}
 		}
-		
+
 		/// <summary>
 		/// 执行批处理命令
 		/// </summary>
@@ -197,7 +199,7 @@ namespace LckeyAnt
 				return false;
 			}
 		}
-		
+
 		/// <summary>
 		/// 执行替换命令
 		/// </summary>
@@ -245,7 +247,7 @@ namespace LckeyAnt
 						sourceContent = ReplaceMarkContent.replaceMarkContent(sourceContent, markValRep.MarkKey, markValRep.NewValue);
 					}
 					//保存覆盖替换内容到页面
-					ReplaceMarkContent.writeFileContent(currrentFile, sourceContent, confTarReplace.OutputEncoding,false);
+					ReplaceMarkContent.writeFileContent(currrentFile, sourceContent, confTarReplace.OutputEncoding, false);
 				}
 				flag = true;
 			} catch (Exception ex) {
@@ -450,6 +452,7 @@ namespace LckeyAnt
  * 错误的cmd命令如dirxxx 也无法显示到log
  * 子目录目前全部不去自动包含
  * 添加节点ID，执行时根据依赖关系判断是否发生异常情况下往下执行?
+ * msbuild支持
  */
 
 /*
