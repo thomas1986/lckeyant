@@ -85,7 +85,7 @@ namespace LckeyAnt
 		public static string replaceMarkNoteContent(string sourceContent, string start, string end, string newContent) {
 			try {
 				//正则替换，区分大小写
-				Regex regReplace = new Regex(start + @".*" + end, RegexOptions.Compiled);
+				Regex regReplace = new Regex(start + @"[\s\S]*?" + end, RegexOptions.Compiled);
 				string newReplaceContent = start + newContent + end;
 				sourceContent = regReplace.Replace(sourceContent, newReplaceContent);
 
