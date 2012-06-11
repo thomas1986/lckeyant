@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<project name="refund" default="build">
+<property name="charset" value="utf-8"/>
+    <property name="tool.dir" location="../../../tool"/>
+    <property name="compiler" location="${tool.dir}/closure-compiler/compiler.jar"/>
+    <property name="form.build.dir" location="../../../build/form"/>
+    <property name="src.dir" location="."/>
+    <property name="uploader.build.dir" location="${form.build.dir}/uploader"/>
+	<property name="ant_test_ahead" location="ant/ant" />
+	<property name="ant_test_back" location="../../../ant_test"/>
+	<property name="ant_test_back1" location=""/>
+	<property name="gcc" location="compiler.jar"/>
+	<property name="yui" location="yuicompressor.jar"/>
+	<property name="ver" dynamic="true" type="datetime" format="yyyyMMddHHmmss" />
+    <target name="build">
+        <echo>Hello world!</echo>
+		<route destfile="a_b.css" encoding="${charset}" outputencoding="${charset}">
+            <path path="a.css"/>
+            <path path="b.css"/>
+			<fileset dir="${ant_test_back1}" includes="index.html"/>
+        </route>
+		<note>执行单个命令</note>
+		<command workdir=""> 
+			<arg value="dir"/>
+		</command>
+		<echo>批处理bat文件</echo>
+		<batch>
+			<path path="mybattest.bat"/>
+		</batch>
+		<note>替换内容</note>
+		<replace encoding="${charset}" outputencoding="${charset}">
+			<fileset dir="${ant_test_back1}" includes="rep.txt" excludes="a.js,b.js"/>
+			<marknote start="&lt;start&gt;" end="&lt;end&gt;"  value="替换的内容" path="toRep.txt" />		
+			<mark key="@rep" value="替换的内容@rep不能死循环哦。。。" path="toRep.txt"/>
+			<mark key="@rep" value="" path=""/>
+			<mark key="" value="" path=""/>
+		</replace>		
+		<compress  executable="java" verbose="true" dest="js" failonerror="true" parallel="false">
+			<fileset dir="${ant_test_back1}" includes="*.js" excludes="a.js,b.js"/>
+			<arg line="-jar"/>
+            <arg path="${gcc}"/>
+            <arg line="--charset utf8"/>
+            <arg value="--warning_level"/>
+            <arg value="QUIET"/>
+            <arg value="--js"/>
+			<srcfile value="a.js"/>
+            <arg value="--js_output_file"/>
+			<mapper type="regexp" from="^(.*)\.js$" to="\1_${ver}.min.js"/>
+            <targetfile value="a.min.js"/>
+		</compress>
+        <route destfile="a_b.js?t=${ver}" encoding="${charset}" outputencoding="${charset}">
+            <path path="a.js"/>
+            <path path="b.js"/>
+			<fileset dir="${ant_test_back1}" includes="*.html,*.aspx" excludes="index_1.aspx,xx.aspx"/>
+        </route>
+		 <concat destfile="a_c.js">
+            <path path="a.js"/>
+            <path path="c.js"/>
+        </concat>
+		 <delete>
+            <fileset dir="${ant_test_back1}" includes="xx.aspx"/>
+        </delete>
+		 <concat destfile="b_c.js">
+            <path path="b.js"/>
+            <path path="c.js"/>
+        </concat>
+    </target>
+	<target name="build">
+        <echo>Hello world!</echo>
+		<compress  executable="java" verbose="true" dest="css" failonerror="true" parallel="false">
+			<fileset dir="${ant_test_back1}" includes="*.css" excludes=""/>
+			<arg line="-jar"/>
+            <arg path="${yui}"/>
+            <arg line="--charset utf8"/>           
+			<srcfile value="a.css"/>
+            <arg value="-o"/>
+			<mapper type="regexp" from="^(.*)\.css$" to="\1.min.css"/>
+            <targetfile value="a.min.css"/>
+		</compress>
+        <route destfile="a_b.js?t=${ver}" encoding="${charset}" outputencoding="${charset}">
+            <path path="a.js"/>
+            <path path="b.js"/>
+			<fileset dir="${ant_test_back1}" includes="*.html,*.aspx" excludes="index_1.aspx,xx.aspx"/>
+        </route>
+		 <concat destfile="a_c.js" encoding="${charset}" outputencoding="${charset}">
+            <path path="a.js"/>
+            <path path="c.js"/>
+        </concat>
+		 <delete>
+            <fileset dir="${ant_test_back1}" includes="xx.aspx"/>
+        </delete>
+		 <concat destfile="b_c.js">
+            <path path="b.js"/>
+            <path path="c.js"/>
+        </concat>
+    </target>
+</project>
