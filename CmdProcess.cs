@@ -14,7 +14,7 @@ namespace LckeyAnt
 			if (args.Length > 0) {
 				string _argsStr = string.Empty;
 				for (int i = 0; i < args.Length; i++) {
-					_argsStr += args[i]+" ";
+					_argsStr += args[i] + " ";
 				}
 				try {
 					LogOutput.logConsoleNow("start process " + _argsStr);
@@ -158,6 +158,9 @@ namespace LckeyAnt
 							break;
 						#endregion
 
+						case "log":
+							LogOutput.logConsoleNow(args[1]);
+							break;
 						case "?":
 							//帮助
 							string arg1 = string.Empty;
@@ -224,6 +227,8 @@ namespace LckeyAnt
 					Console.WriteLine("* lckeyant -replace_mark targetPath  outputencoding oldMark sourcePath encoding");
 					Console.WriteLine("* [替换targetPath文件的start与end之间的值为sourcePath的内容]：");
 					Console.WriteLine("* lckeyant -replace_start_end targetPath  outputencoding start end sourcePath encoding");
+					Console.WriteLine("* [系统输出日志方法到logs/目录下]：");
+					Console.WriteLine("* lckeyant -log msg");
 
 					//提示信息
 					Console.WriteLine("* ------参数example--------");
