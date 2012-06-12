@@ -22,6 +22,7 @@ namespace LckeyAnt
 			//p.StartInfo.RedirectStandardInput = true;
 			p.StartInfo.RedirectStandardOutput = true;
 			// @"C:\Documents and Settings\thomas\桌面\test\t.bat";
+			LogOutput.logConsoleNow(fileName);
 			p.StartInfo.FileName = fileName;
 			//p.StartInfo.WorkingDirectory = @"E:\";
 			p.StartInfo.Arguments = args;//传入bat的参数

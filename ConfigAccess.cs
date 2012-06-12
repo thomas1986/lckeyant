@@ -76,8 +76,10 @@ namespace LckeyAnt
 									break;
 								}
 								proValue = getXmlNodeAttrVal(currentNode, "value");
+								if (proValue == string.Empty) {
 
-								proValue = getXmlNodeAttrVal(currentNode, "location");
+									proValue = getXmlNodeAttrVal(currentNode, "location");
+								}
 
 								//无则添加key,有则覆盖value
 								dictProperty[proKey] = proValue;
@@ -453,6 +455,7 @@ namespace LckeyAnt
 			LogOutput.logConsoleNow("********start  exec command **********");
 			List<List<Dictionary<string, object>>> allTargetList = configInfo.AllTargetList;
 			int allTarLen = allTargetList.Count;
+			string exStr = string.Empty;
 			for (int i = 0; i < allTarLen; i++) {
 				//单个target内信息集合，可能包括多个concat,route,delete等
 				List<Dictionary<string, object>> singleTargetList = allTargetList[i];
@@ -465,42 +468,70 @@ namespace LckeyAnt
 						//定义switch中公共变量
 						object dictValue = dictItem[dictKey];
 						Object2StringCmd o2scmd = new Object2StringCmd();
-
+						//执行属性节点
 						switch (dictKey) {
 							case "route":
-								ConfigTargetRoute confTarRoute = (ConfigTargetRoute)dictValue;
-								o2scmd.execRouteMergeCmd(confTarRoute, configInfo.RootPath);
-								LogOutput.logConsoleNow("route finished");
+								try {
+									ConfigTargetRoute confTarRoute = (ConfigTargetRoute)dictValue;
+									o2scmd.execRouteMergeCmd(confTarRoute, configInfo.RootPath);
+									LogOutput.logConsoleNow("route finished");
+								} catch (LogException logEx) {
+									handleRuntimeEx(logEx);
+								}
 								break;
 							case "concat":
-								ConfigTargetConcat confTarConcat = (ConfigTargetConcat)dictValue;
-								o2scmd.execConcatCmd(confTarConcat, configInfo.RootPath);
-								LogOutput.logConsoleNow("concat finished");
+								try {
+									ConfigTargetConcat confTarConcat = (ConfigTargetConcat)dictValue;
+									o2scmd.execConcatCmd(confTarConcat, configInfo.RootPath);
+									LogOutput.logConsoleNow("concat finished");
+								} catch (LogException logEx) {
+									handleRuntimeEx(logEx);
+								}
 								break;
 							case "delete":
-								List<ConfigTargetDelete> cfdList = (List<ConfigTargetDelete>)dictValue;
-								o2scmd.execDeleteCmd(cfdList, configInfo.RootPath);
-								LogOutput.logConsoleNow("delete finished");
+								try {
+									List<ConfigTargetDelete> cfdList = (List<ConfigTargetDelete>)dictValue;
+									o2scmd.execDeleteCmd(cfdList, configInfo.RootPath);
+									LogOutput.logConsoleNow("delete finished");
+								} catch (LogException logEx) {
+									handleRuntimeEx(logEx);
+								}
 								break;
 							case "compress":
-								ConfigTargetCompress confTarCompress = (ConfigTargetCompress)dictValue;
-								o2scmd.execCompressCmd(confTarCompress, configInfo.RootPath);
-								LogOutput.logConsoleNow("compress finished");
+								try {
+									ConfigTargetCompress confTarCompress = (ConfigTargetCompress)dictValue;
+									o2scmd.execCompressCmd(confTarCompress, configInfo.RootPath);
+									LogOutput.logConsoleNow("compress finished");
+								} catch (LogException logEx) {
+									handleRuntimeEx(logEx);
+								}
 								break;
 							case "command":
-								ConfigTargetCommand confTarCommand = (ConfigTargetCommand)dictValue;
-								o2scmd.execCommandCmd(confTarCommand, configInfo.RootPath);
-								LogOutput.logConsoleNow("command finished");
+								try {
+									ConfigTargetCommand confTarCommand = (ConfigTargetCommand)dictValue;
+									o2scmd.execCommandCmd(confTarCommand, configInfo.RootPath);
+									LogOutput.logConsoleNow("command finished");
+								} catch (LogException logEx) {
+									handleRuntimeEx(logEx);
+								}
 								break;
 							case "batch":
-								List<ConfigTargetBatch> confTarBatchList = (List<ConfigTargetBatch>)dictValue;
-								o2scmd.execBatchCmd(confTarBatchList, configInfo.RootPath);
-								LogOutput.logConsoleNow("batch finished");
+								try {									
+									List<ConfigTargetBatch> confTarBatchList = (List<ConfigTargetBatch>)dictValue;
+									o2scmd.execBatchCmd(confTarBatchList, configInfo.RootPath);
+									LogOutput.logConsoleNow("batch finished");
+								} catch (LogException logEx) {
+									handleRuntimeEx(logEx);
+								}
 								break;
 							case "replace":
-								ConfigTargetReplace confTarReplace = (ConfigTargetReplace)dictValue;
-								o2scmd.execReplaceCmd(confTarReplace, configInfo.RootPath);
-								LogOutput.logConsoleNow("replace finished");
+								try {
+									ConfigTargetReplace confTarReplace = (ConfigTargetReplace)dictValue;
+									o2scmd.execReplaceCmd(confTarReplace, configInfo.RootPath);
+									LogOutput.logConsoleNow("replace finished");
+								} catch (LogException logEx) {
+									handleRuntimeEx(logEx);
+								}
 								break;
 							default: break;
 						}
@@ -509,5 +540,22 @@ namespace LckeyAnt
 			}
 			LogOutput.logConsoleNow("********All command  finished!**********");
 		}
+
+		/// <summary>
+		/// 执行某个节点导致异常后的中断、继续判断
+		/// </summary>
+		/// <param name="logEx"></param>
+		public void handleRuntimeEx(LogException logEx) {
+			Console.WriteLine("节点执行出现异常，是否中止执行：");
+			Console.WriteLine("--输入 continue 继续执行下面内容"); 
+			Console.WriteLine("--其他输入将中止执行");
+			//异常后接受输入字符,判断是否继续执行
+			if (Console.ReadLine() != "continue") {
+				throw new LogException("ConfigAccess 执行节点失败", logEx);
+			} else {
+				LogOutput.logConsole(new LogException("ConfigAccess 执行节点失败", logEx));
+			}
+		}
+
 	}
 }

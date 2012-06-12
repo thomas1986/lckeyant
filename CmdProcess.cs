@@ -22,7 +22,7 @@ namespace LckeyAnt
 					LogOutput.logConsoleNow("end   process " + _argsStr);
 				} catch (Exception ex) {
 
-					LogOutput.logConsole(new LogException("执行命令参数 " + _argsStr + " 出错：" + ex.Message, ex));
+					LogOutput.logConsole(new LogException("执行命令参数 " + _argsStr + " 出错", ex));
 				}
 			} else {
 				//启动程序时，args无值传入

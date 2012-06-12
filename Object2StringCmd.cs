@@ -33,7 +33,7 @@ namespace LckeyAnt
 				MergeRoute.repMultiPagesMultiItems(pageFiles, mergeUriDetail, confTarRoute.Encoding, confTarRoute.OutputEncoding);
 				return true;
 			} catch (Exception ex) {
-				return false;
+				throw new LogException("Object2StringCmd=>route merge 执行失败", ex);
 			}
 		}
 
@@ -51,8 +51,7 @@ namespace LckeyAnt
 				ConcatFile.concatFilesByUriDetail(concatUriDetail, confTarConcat.Encoding, confTarConcat.OutputEncoding);
 				return true;
 			} catch (Exception ex) {
-				throw ex;
-				return false;
+				throw new LogException("Object2StringCmd=>concat 执行失败", ex);
 			}
 		}
 
@@ -76,8 +75,7 @@ namespace LckeyAnt
 				}
 				return true;
 			} catch (Exception ex) {
-				throw ex;
-				return false;
+				throw new LogException("Object2StringCmd=>delete 执行失败", ex);
 			}
 		}
 
@@ -152,8 +150,7 @@ namespace LckeyAnt
 				}
 				return true;
 			} catch (Exception ex) {
-				throw ex;
-				return false;
+				throw new LogException("Object2StringCmd=>compress 执行失败", ex);
 			}
 		}
 
@@ -174,8 +171,7 @@ namespace LckeyAnt
 				RunCommand.callCmdSync(workDir, cmdList);
 				return true;
 			} catch (Exception ex) {
-				throw ex;
-				return false;
+				throw new LogException("Object2StringCmd=>command 执行失败", ex);
 			}
 		}
 
@@ -195,8 +191,7 @@ namespace LckeyAnt
 				}
 				return true;
 			} catch (Exception ex) {
-				throw ex;
-				return false;
+				throw new LogException("Object2StringCmd=>batch 执行失败", ex);
 			}
 		}
 
@@ -251,7 +246,7 @@ namespace LckeyAnt
 				}
 				flag = true;
 			} catch (Exception ex) {
-				throw ex;
+				throw new LogException("Object2StringCmd=>replace 执行失败", ex);
 			}
 			return flag;
 		}
