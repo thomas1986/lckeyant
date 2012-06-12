@@ -395,7 +395,7 @@ namespace LckeyAnt
 					}
 				}
 			}
-			return ret.Substring(1);
+			return ret.Length > 0 ? ret.Substring(1) : ret;
 		}
 
 		#endregion
