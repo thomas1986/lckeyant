@@ -276,8 +276,8 @@ namespace LckeyAnt
 									if (!hasSrcFile) {
 										confTarCompress.BeforeSrcFile += " " + getFilteredXmlNodeAttrVal(compressChiNodeI, "line", dictProperty);
 										if (compressChiNodeI.Attributes["path"] != null) {
-											//compiler文件路径
-											confTarCompress.BeforeSrcFile += " " + Path.GetFullPath(Path.Combine(rootPath, getFilteredXmlNodeAttrVal(compressChiNodeI, "path", dictProperty)));
+											//compiler文件路径,路径 添加引号，防止有空格
+											confTarCompress.BeforeSrcFile += " \"" + Path.GetFullPath(Path.Combine(rootPath, getFilteredXmlNodeAttrVal(compressChiNodeI, "path", dictProperty)))+"\" ";
 										}
 										confTarCompress.BeforeSrcFile += " " + getFilteredXmlNodeAttrVal(compressChiNodeI, "value", dictProperty);
 									} else {
@@ -294,8 +294,8 @@ namespace LckeyAnt
 									break;
 								case "srcfile":
 									hasSrcFile = true;
-									//本地绝对路径
-									confTarCompress.SrcFile = Path.GetFullPath(Path.Combine(rootPath, getFilteredXmlNodeAttrVal(compressChiNodeI, "value", dictProperty)));
+									//不转换成相对rootPath的路径，使用xml原始值
+									confTarCompress.SrcFile = getFilteredXmlNodeAttrVal(compressChiNodeI, "value", dictProperty);
 									break;
 								case "mapper":
 									confTarCompress.MapperType = getFilteredXmlNodeAttrVal(compressChiNodeI, "type", dictProperty);
@@ -303,7 +303,8 @@ namespace LckeyAnt
 									confTarCompress.MapperTo = getFilteredXmlNodeAttrVal(compressChiNodeI, "to", dictProperty);
 									break;
 								case "targetfile":
-									confTarCompress.TargetFile = Path.GetFullPath(Path.Combine(rootPath, getFilteredXmlNodeAttrVal(compressChiNodeI, "value", dictProperty)));
+									//不转换成相对rootPath的路径，使用xml原始值
+									confTarCompress.TargetFile = getFilteredXmlNodeAttrVal(compressChiNodeI, "value", dictProperty);
 									break;
 								default: break;
 							}

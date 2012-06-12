@@ -141,23 +141,33 @@ namespace LckeyAnt
 					}
 					toFilePath = Path.GetFullPath(Path.Combine(destDirPath, toFile));
 					//添加压缩命令语句
-					cmdList.Add(confTarCompress.BeforeSrcFile + SPACE + currentFile + SPACE + confTarCompress.OutputArg + SPACE + toFilePath);
+					cmdList.Add(confTarCompress.BeforeSrcFile + SPACE + "\"" + currentFile + "\"" + SPACE + confTarCompress.OutputArg + SPACE + "\"" + toFilePath + "\"");
 				}
 				#endregion
 				//srcFile ,targetFile 情况下
 				#region srcFile , targetFile
 				if (confTarCompress.SrcFile != string.Empty && confTarCompress.TargetFile != string.Empty) {
-					string targetDir = confTarCompress.TargetFile.Substring(0, confTarCompress.TargetFile.LastIndexOf('\\'));
-					string targetFile = confTarCompress.TargetFile.Substring(confTarCompress.TargetFile.LastIndexOf('\\') + 1);
-					//dest目录
-					string targetDestDirPath = Path.GetFullPath(Path.Combine(targetDir, confTarCompress.DestDir));
-					//确保存在targetDestDirPath目录
-					if (!Directory.Exists(targetDestDirPath)) {
-						Directory.CreateDirectory(targetDestDirPath);
+					//转为绝对路径
+					string _srcFilePath = Path.GetFullPath(Path.Combine(confTarCompress.SrcFile, rootPath));
+					string _targetFilePath = Path.GetFullPath(Path.Combine(confTarCompress.TargetFile, rootPath));
+					//存在源文件才继续进行,只支持又扩展名的文件target
+					if (File.Exists(_srcFilePath) && Path.HasExtension(_targetFilePath)) {
+						//target绝对路径
+						confTarCompress.SrcFile = _srcFilePath;
+						confTarCompress.TargetFile = _targetFilePath;
+
+						string targetDir = _targetFilePath.Substring(0, _targetFilePath.LastIndexOf('\\'));
+						string targetFile = _targetFilePath.Substring(_targetFilePath.LastIndexOf('\\') + 1);
+						//dest目录
+						string targetDestDirPath = Path.GetFullPath(Path.Combine(targetDir, confTarCompress.DestDir));
+						//确保存在targetDestDirPath目录
+						if (!Directory.Exists(targetDestDirPath)) {
+							Directory.CreateDirectory(targetDestDirPath);
+						}
+						string targetFilePath = Path.GetFullPath(Path.Combine(targetDestDirPath, targetFile));
+						//添加压缩命令语句
+						cmdList.Add(confTarCompress.BeforeSrcFile + SPACE + "\"" + confTarCompress.SrcFile + "\"" + SPACE + confTarCompress.OutputArg + SPACE + "\"" + targetFilePath + "\"");
 					}
-					string targetFilePath = Path.GetFullPath(Path.Combine(targetDestDirPath, targetFile));
-					//添加压缩命令语句
-					cmdList.Add(confTarCompress.BeforeSrcFile + SPACE + confTarCompress.SrcFile + SPACE + confTarCompress.OutputArg + SPACE + targetFilePath);
 				}
 				#endregion
 				//执行

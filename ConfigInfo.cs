@@ -324,6 +324,7 @@ namespace LckeyAnt
 		}
 		/// <summary>
 		/// 压缩后的目标文件夹
+		/// 相对于 fileset的根目录 或 targetFile的根目录 的地址
 		/// </summary>
 		public string DestDir {
 			get { return destDir; }
@@ -345,6 +346,7 @@ namespace LckeyAnt
 		}
 		/// <summary>
 		/// 待压缩的文件，有BaseConfTarFilterFileList结果，则此项可不填
+		///  此项的为xml中读取的原始值，只在最后使用时，才匹配成绝对路径
 		/// </summary>
 		public string SrcFile {
 			get { return srcFile; }
@@ -380,6 +382,8 @@ namespace LckeyAnt
 		}
 		/// <summary>
 		/// 压缩目标文件,有mapper->regexpto结果，则此项可不填
+		/// 此项的为xml中读取的原始值，只在最后使用时，才匹配成绝对路径
+		/// 只支持有扩展名的文件target
 		/// </summary>
 		public string TargetFile {
 			get { return targetFile; }
