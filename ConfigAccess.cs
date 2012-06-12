@@ -77,7 +77,6 @@ namespace LckeyAnt
 								}
 								proValue = getXmlNodeAttrVal(currentNode, "value");
 								if (proValue == string.Empty) {
-
 									proValue = getXmlNodeAttrVal(currentNode, "location");
 								}
 
@@ -220,24 +219,34 @@ namespace LckeyAnt
 						XmlNodeList deleteNodes = targetChildNodesI.ChildNodes;
 						int deleteNodesLen = deleteNodes.Count;
 						//要删除的集合
-						List<ConfigTargetDelete> filesetList = new List<ConfigTargetDelete>();
+						ConfigTargetDelete fileset = new ConfigTargetDelete();
 						for (int k = 0; k < deleteNodesLen; k++) {
+							BaseConfigTargetFilterFile confTargetDelete = new BaseConfigTargetFilterFile();
 							XmlNode deleteNodesK = deleteNodes[k];
-							if (deleteNodes[k].Name == "fileset") {
-								ConfigTargetDelete confTargetDelete = new ConfigTargetDelete();
+							switch (deleteNodesK.Name) {
+								case "fileset":
+									//删除文件
+									confTargetDelete.Dir = getFilteredXmlNodeAttrVal(deleteNodesK, "dir", dictProperty);
 
-								confTargetDelete.Dir = getFilteredXmlNodeAttrVal(deleteNodesK, "dir", dictProperty);
+									confTargetDelete.Includes = getFilteredXmlNodeAttrVal(deleteNodesK, "includes", dictProperty);
 
-								confTargetDelete.Includes = getFilteredXmlNodeAttrVal(deleteNodesK, "includes", dictProperty);
+									confTargetDelete.Excludes = getFilteredXmlNodeAttrVal(deleteNodesK, "excludes", dictProperty);
 
-								confTargetDelete.Excludes = getFilteredXmlNodeAttrVal(deleteNodesK, "excludes", dictProperty);
-
-								filesetList.Add(confTargetDelete);
+									fileset.DeleteFileSetList.Add(confTargetDelete);
+									break;
+								case "folder":
+									//删除目录,支持删除值的参数为path,value,location任意一个非空，先到先得
+									string folderPath = string.Empty;
+									folderPath = getFilteredXmlNodeAttrVal(deleteNodesK, new string[] { "path", "location", "value" }, dictProperty);
+									if (folderPath != string.Empty) {
+										fileset.FolderList.Add(folderPath);
+									}
+									break;
 							}
 						}
 						Dictionary<string, object> dictDeleteSub = new Dictionary<string, object>();
 						//delete这里是添加的一个list
-						dictDeleteSub.Add("delete", filesetList);
+						dictDeleteSub.Add("delete", fileset);
 						currentTargetList.Add(dictDeleteSub);
 						#endregion
 						break;
@@ -404,6 +413,7 @@ namespace LckeyAnt
 			LogOutput.logConsoleNow("end   read config info target");
 			return currentTargetList;
 		}
+
 		/// <summary>
 		/// 获取过滤后的xmlNode的属性值,无则返回空字符串
 		/// </summary>
@@ -416,6 +426,34 @@ namespace LckeyAnt
 			}
 			return string.Empty;
 		}
+
+		/// <summary>
+		/// 同一意义属性不同名属性值支持
+		/// 如 path,value,location三个属性节点都可以有效，且按顺序先到先得,返回任意第一个非空值
+		/// 获取过滤后的xmlNode的属性值,无则返回空字符串
+		/// </summary>
+		/// <param name="xmlNode"></param>
+		/// <param name="attr"></param>
+		/// <returns></returns>
+		public string getFilteredXmlNodeAttrVal(XmlNode xmlNode, string[] attrArr, Dictionary<string, string> dictProperty) {
+
+			int arrLen = attrArr.Length;
+			string attr = string.Empty;
+			string ret = string.Empty;
+			for (int i = 0; i < arrLen; i++) {
+				attr = attrArr[i];
+				//按数组的索引顺序匹配，，先到先得
+				if (xmlNode.Attributes[attr] != null) {
+					ret = filterValueByKey(xmlNode.Attributes[attr].Value, dictProperty);
+					// 不为空字符则返回该结果值
+					if (ret != string.Empty) {
+						return ret;
+					}
+				}
+			}
+			return ret;
+		}
+
 		/// <summary>
 		/// 获取未过滤的原始属性值
 		/// </summary>
@@ -490,8 +528,8 @@ namespace LckeyAnt
 								break;
 							case "delete":
 								try {
-									List<ConfigTargetDelete> cfdList = (List<ConfigTargetDelete>)dictValue;
-									o2scmd.execDeleteCmd(cfdList, configInfo.RootPath);
+									ConfigTargetDelete confTarDelete = (ConfigTargetDelete)dictValue;
+									o2scmd.execDeleteCmd(confTarDelete, configInfo.RootPath);
 									LogOutput.logConsoleNow("delete finished");
 								} catch (LogException logEx) {
 									handleRuntimeEx(logEx);
@@ -516,7 +554,7 @@ namespace LckeyAnt
 								}
 								break;
 							case "batch":
-								try {									
+								try {
 									List<ConfigTargetBatch> confTarBatchList = (List<ConfigTargetBatch>)dictValue;
 									o2scmd.execBatchCmd(confTarBatchList, configInfo.RootPath);
 									LogOutput.logConsoleNow("batch finished");
@@ -547,7 +585,7 @@ namespace LckeyAnt
 		/// <param name="logEx"></param>
 		public void handleRuntimeEx(LogException logEx) {
 			Console.WriteLine("节点执行出现异常，是否中止执行：");
-			Console.WriteLine("--输入 continue 继续执行下面内容"); 
+			Console.WriteLine("--输入 continue 继续执行下面内容");
 			Console.WriteLine("--其他输入将中止执行");
 			//异常后接受输入字符,判断是否继续执行
 			if (Console.ReadLine() != "continue") {

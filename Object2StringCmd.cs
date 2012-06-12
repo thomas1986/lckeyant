@@ -61,16 +61,32 @@ namespace LckeyAnt
 		/// <param name="confTarDelList"></param>
 		/// <param name="rootPath"></param>
 		/// <returns></returns>
-		public bool execDeleteCmd(List<ConfigTargetDelete> confTarDelList, string rootPath) {
+		public bool execDeleteCmd(ConfigTargetDelete confTarDelete, string rootPath) {
 			try {
 				//转变为父类List
-				List<BaseConfigTargetFilterFile> baseConfTarFilterFileList = parseTList<ConfigTargetDelete, BaseConfigTargetFilterFile>(confTarDelList);
-				string deleteFiles = getFilesInDir(baseConfTarFilterFileList, rootPath);
+				//List<BaseConfigTargetFilterFile> baseConfTarFilterFileList = parseTList<ConfigTargetDelete, BaseConfigTargetFilterFile>(confTarDelList);
+				//删除文件
+				string deleteFiles = getFilesInDir(confTarDelete.DeleteFileSetList, rootPath);
 				string[] delFileArr = deleteFiles.Split(',');
 				int delLen = delFileArr.Length;
 				for (int i = 0; i < delLen; i++) {
-					if (File.Exists(delFileArr[i])) {
-						File.Delete(delFileArr[i]);
+					string delFilePath = delFileArr[i];
+					if (File.Exists(delFilePath)) {
+						File.Delete(delFilePath);
+						LogOutput.logConsoleNow(delFilePath);
+					}
+				}
+				//删除目录
+				string deleteFolders = getFoldersByList(confTarDelete.FolderList, rootPath);
+				LogOutput.logConsoleNow(deleteFolders);
+				string[] delFolderArr = deleteFolders.Split(',');
+				int delFolderLen = delFolderArr.Length;
+				for (int j = 0; j < delFolderLen; j++) {
+					string delFolderPath = delFolderArr[j];
+					if (Directory.Exists(delFolderPath)) {
+						//移除子目录，文件等
+						Directory.Delete(delFolderPath, true);
+						LogOutput.logConsoleNow(delFolderPath);
 					}
 				}
 				return true;
@@ -351,7 +367,26 @@ namespace LckeyAnt
 			return htmlFiles.Length > 0 ? htmlFiles.Substring(1) : htmlFiles;
 		}
 
-
+		/// <summary>
+		/// 获取文件夹目录的绝对路径
+		/// </summary>
+		/// <param name="folderList"></param>
+		/// <param name="rootPath"></param>
+		/// <returns></returns>
+		public string getFoldersByList(List<string> folderList, string rootPath) {
+			string ret = string.Empty;
+			foreach (string folder in folderList) {
+				string[] folderSplit = folder.Split(',');
+				int len = folderSplit.Length;
+				for (int i = 0; i < len; i++) {
+					//转换成rootPath相对的绝对路径地址,去掉空字符串的值，否则将删除根目录
+					if (folderSplit[i] != string.Empty) {
+						ret += "," + Path.GetFullPath(Path.Combine(rootPath, folderSplit[i]));
+					}
+				}
+			}
+			return ret.Substring(1);
+		}
 
 		#endregion
 

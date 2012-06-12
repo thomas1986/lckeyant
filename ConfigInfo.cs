@@ -158,16 +158,23 @@ namespace LckeyAnt
 			includes = _includes;
 			excludes = _excludes;
 		}
-
+		/// <summary>
+		/// 文件夹路径
+		/// </summary>
 		public string Dir {
 			get { return dir; }
 			set { dir = value; }
 		}
-
+		/// <summary>
+		/// 包含文件匹配字符，用逗号分隔开
+		/// </summary>
 		public string Includes {
 			get { return includes; }
 			set { includes = value; }
 		}
+		/// <summary>
+		/// 排除文件匹配字符，用逗号分隔开
+		/// </summary>
 		public string Excludes {
 			get { return excludes; }
 			set { excludes = value; }
@@ -178,7 +185,7 @@ namespace LckeyAnt
 	/// <summary>
 	/// delete操作
 	/// </summary>
-	public class ConfigTargetDelete : BaseConfigTargetFilterFile
+	public class ConfigTargetDelete
 	{
 		/*
 			private string dir = string.Empty;
@@ -208,6 +215,35 @@ namespace LckeyAnt
 				set { excludes = value; }
 			}
 		 * */
+		private List<string> folderList = new List<string>();
+		private List<BaseConfigTargetFilterFile> deleteFileSetList = new List<BaseConfigTargetFilterFile>();
+
+		public ConfigTargetDelete() : base() { }
+
+		public ConfigTargetDelete(List<string> _folderList, List<BaseConfigTargetFilterFile> _deleteFileSetList) {
+			folderList = _folderList;
+			deleteFileSetList = _deleteFileSetList;
+		}
+
+		/// <summary>
+		/// 文件夹集合，单条实例string：可以使用逗号分隔开，可以是相对路径
+		/// </summary>
+		public List<string> FolderList {
+			get { return folderList; }
+			set { folderList = value; }
+		}
+
+		/// <summary>
+		/// 文件属性集合
+		/// </summary>
+		public List<BaseConfigTargetFilterFile> DeleteFileSetList {
+			get { return deleteFileSetList; }
+			set { deleteFileSetList = value; }
+		}
+
+		/// <summary>
+		/// test...
+		/// </summary>
 		public string DeleteId {
 			get;
 			set;

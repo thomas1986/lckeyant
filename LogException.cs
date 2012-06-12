@@ -78,6 +78,20 @@ namespace LckeyAnt
 
 		#region base继承的构造方式
 
+		public LogException() : base() { }
+
+		/// <summary>
+		/// 保存message属性
+		/// </summary>
+		/// <param name="message"></param>
+		public LogException(string message)
+			: base(message) {
+			//this.ExceptionType = exceptionType;
+			//this.TypeName = ExceptionAccess.getExValueByKey(exceptionType);
+			this.LogMessage = message;
+			this.ExceptionTime = DateTime.Now.ToString();
+		}
+
 		/// <summary>
 		/// 维护了内部异常链(尽量使用此方法实例化)
 		/// 已经保存了logEx的message,innerexception属性，只许set其他的
@@ -90,18 +104,37 @@ namespace LckeyAnt
 			this.LogInnerException = innerexception;
 			this.ExceptionTime = DateTime.Now.ToString();
 		}
+
 		/// <summary>
-		/// 保存message属性
+		/// 维护了内部异常链的构造函数，并通过_exceptionType 请求xml文件来获取typeName
 		/// </summary>
 		/// <param name="message"></param>
-		public LogException(string message)
-			: base(message) {
-			//this.ExceptionType = exceptionType;
-			//this.TypeName = ExceptionAccess.getExValueByKey(exceptionType);
+		/// <param name="innerexception"></param>
+		/// <param name="_exceptionType"></param>
+		public LogException(string message, Exception innerexception, int _exceptionType)
+			: base(message, innerexception) {
+			exceptionType = _exceptionType;
+			typeName = ExceptionAccess.getExValueByKey(exceptionType);
 			this.LogMessage = message;
+			this.LogInnerException = innerexception;
 			this.ExceptionTime = DateTime.Now.ToString();
 		}
-		public LogException() : base() { }
+
+		/// <summary>
+		/// 维护了内部异常链的构造函数,传入完整参数构建对象
+		/// </summary>
+		/// <param name="message"></param>
+		/// <param name="innerexception"></param>
+		/// <param name="_exceptionType"></param>
+		/// <param name="_typeName"></param>
+		public LogException(string message, Exception innerexception, int _exceptionType, string _typeName)
+			: base(message, innerexception) {
+			exceptionType = _exceptionType;
+			typeName = _typeName;
+			this.LogMessage = message;
+			this.LogInnerException = innerexception;
+			this.ExceptionTime = DateTime.Now.ToString();
+		}
 
 		#endregion
 
