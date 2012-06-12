@@ -191,7 +191,10 @@ namespace LckeyAnt
 						#region concat
 						List<string> sourceList = new List<string>();
 						//目标文件
-						string targetFile = filterValueByKey(targetChildNodesI.Attributes["destfile"].Value, dictProperty);
+						string targetFile = getFilteredXmlNodeAttrVal(targetChildNodesI, "destfile", dictProperty);
+						//目标文件为空则，返回
+						if (targetFile == string.Empty) break;
+						//filterValueByKey(targetChildNodesI.Attributes["destfile"].Value, dictProperty);
 						string encoding = string.Empty;
 						string outputEncoding = string.Empty;
 
@@ -204,7 +207,10 @@ namespace LckeyAnt
 						int sourceNodesLen = sourceNodes.Count;
 						for (int j = 0; j < sourceNodesLen; j++) {
 							if (sourceNodes[j].Name == "path") {
-								sourceList.Add(filterValueByKey(sourceNodes[j].Attributes["path"].Value, dictProperty));
+								string _concatPath = getFilteredXmlNodeAttrVal(sourceNodes[j], "path", dictProperty);
+								if (_concatPath != string.Empty) {
+									sourceList.Add(_concatPath);
+								}
 							}
 						}
 						Dictionary<string, object> dictConcatSub = new Dictionary<string, object>();

@@ -19,9 +19,9 @@ namespace LckeyAnt
 			//logEx.LogInnerException
 			List<string> msgList = new List<string>();
 			recurInnerEx(logEx, (_logEx) => {
-				msgList.Add(_logEx.LogMessage);
+				msgList.Add(_logEx.LogMessage + _logEx.StackTrace);
 			}, (_ex) => {
-				msgList.Add(_ex.Message);
+				msgList.Add(_ex.Message + _ex.StackTrace);
 			});
 
 			//输出信息1
@@ -94,29 +94,9 @@ namespace LckeyAnt
 		/// </summary>
 		/// <param name="logEx"></param>
 		public static void logConsole(LogException logEx) {
-			//记录异常到全局
-			GlobalCurrent.RUNTIME_LOGEXCEPTION_LIST.Add(logEx);
-			//logEx.LogInnerException
-			List<string> msgList = new List<string>();
-			recurInnerEx(logEx, (_logEx) => {
-				msgList.Add(_logEx.LogMessage);
-			}, (_ex) => {
-				msgList.Add(_ex.Message);
-			});
-
-			//输出信息1
-			string msg = "#Exception : [ " + logEx.ExceptionTime + " ] [ " + logEx.ExceptionType + " ] [ " + logEx.TypeName + " ] ";
 			//输出到控制台
-			//Console.WriteLine(msg);
 			Console.WriteLine(logEx.LogMessage);
-			//记录异常日志
-			//LogCommon.Instance.WriteLine(new string[] { msg, logEx.LogMessage });
-			LogCommon.Instance.WriteByAction((logWriter) => {
-				logWriter.WriteLine(msg);
-				foreach (string _msg in msgList) {
-					logWriter.WriteLine(_msg);
-				}
-			});
+			log(logEx);
 		}
 		#endregion
 
