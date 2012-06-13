@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="refund" default="build">
+	<property name="charset" value="utf-8"/>	
+	<property name="gcc" location="F:\Install\googleClosureCompiler\compiler.jar"/>
+	<property name="yui" location="F:\Install\YuiCompressor\yuicompressor.jar"/>
+	<property name="lckey" location="G:\Current_Project\lckey"/>
+	<property name="desk" location="C:\Documents and Settings\thomas\桌面"/>
+	<property name="lckey_publish" location="C:\Documents and Settings\thomas\桌面\lckey\lckey_publish"/>
+	<property name="lckey_bats" location="C:\Documents and Settings\thomas\桌面\lckey\lckey_bats"/>	
+	
+	<property name="ver" dynamic="true" type="datetime" format="yyyyMMddHHmmss" />
+	
+	<note>传入cmd,bat,jar中执行的路径中间不能有空格</note>
+
+	<target note="lckeyant.exe拷贝">
+		<batchxxxxx>
+			<note>拷贝lckeyant.exe可执行文件</note>
+			<path path="${desk}\copyantexe.bat" />
+		</batchxxxxx>
+	</target>
+	<target note="发布前准备">
+		<replace encoding="${charset}" outputencoding="${charset}">
+			<note>替换meta,head,foot</note>
+			<fileset dir="${ant_test_back1}" includes="*.html,*.aspx" excludes=""/>
+			<marknote start="&lt;!--meta start-->" end="&lt;!--meta end-->" value="" path="commonPart/meta.html" />
+			<marknote start="&lt;!--header start--&gt;" end="&lt;!--header end--&gt;"  value="" path="commonPart/header.html" />
+			<marknote start="&lt;!--footer start--&gt;" end="&lt;!--footer end--&gt;"  value="" path="commonPart/footer_no51la.html" />
+			<mark key="" value="" path=""/>
+		</replace>
+		<batch>
+			<note>压缩，svn提交js已经在 桌面\\lckey.bat=>%lckey%\js\build.bat中处理了</note>
+		</batch>
+		<batchxxxxx>
+			<note>js压缩处理</note>
+			<path path="${lckey}\js\build.bat" />
+		</batchxxxxx>
+	</target>
+	<target note="发布">
+		<batch>
+			<note>发布程序到桌面\lckey文件夹</note>
+			<path path="${desk}\lckey_website_publish.bat" />
+		</batch>
+	</target>
+	<target note="发布后处理">
+		<note>发布后处理，删除多余文件，ftp上传</note>
+		<replace encoding="${charset}" outputencoding="${charset}">
+			<note>替换foot显示统计js</note>
+			<fileset dir="${lckey_publish}" includes="*.html,*.aspx" excludes=""/>
+			<marknote start="&lt;!--footer start--&gt;" end="&lt;!--footer end--&gt;"  value="" path="commonPart/footer.html" />
+		</replace>
+		<delete note="删除杂项">
+			<fileset dir="${lckey_publish}" includes="*.sln,readme.txt"/>
+			<fileset dir="${lckey_publish}" includes="*.xml"/>
+			<folder path="${lckey_publish}\commonPart"/>
+		</delete>
+	</target>
+	<target note="处理js">
+		<compress note="压缩js"  executable="java"  dest="" >
+			<fileset dir="${lckey_publish}\js" includes="*.js" excludes=""/>
+			<arg line="-jar"/>
+			<arg path="${gcc}"/>
+			<arg line="--charset utf8"/>
+			<arg value="--warning_level"/>
+			<arg value="QUIET"/>
+			<arg value="--js"/>
+			<srcfile value=""/>
+			<arg value="--js_output_file"/>
+			<mapper type="regexp" from="^(.*)\.js$" to="\1.min.js"/>
+			<targetfile value=""/>
+		</compress>
+		
+		<route destfile="js/loadScript.min.js?t=${ver}" encoding="${charset}" outputencoding="${charset}">
+			<path path="js/loadScript.js"/>
+			<fileset dir="${lckey_publish}" includes="*.html,*.aspx" excludes=""/>
+		</route>
+		<route destfile="js/t.min.js?t=${ver}" encoding="${charset}" outputencoding="${charset}">
+			<path path="js/t.js"/>
+			<fileset dir="${lckey_publish}" includes="*.html,*.aspx" excludes=""/>
+		</route>
+		<route destfile="js/log.min.js?t=${ver}" encoding="${charset}" outputencoding="${charset}">
+			<path path="js/log.js"/>
+			<fileset dir="${lckey_publish}" includes="*.html,*.aspx" excludes=""/>
+		</route>
+		<route destfile="js/suggest.min.js?t=${ver}" encoding="${charset}" outputencoding="${charset}">
+			<path path="js/suggest.js"/>
+			<fileset dir="${lckey_publish}" includes="*.html,*.aspx" excludes=""/>
+		</route>
+		<route destfile="js/ajax.min.js?t=${ver}" encoding="${charset}" outputencoding="${charset}">
+			<path path="js/ajax.js"/>
+			<fileset dir="${lckey_publish}" includes="*.html,*.aspx" excludes=""/>
+		</route>
+		
+		<delete note="删除js">
+			<fileset dir="${lckey_publish}\js" includes="*.txt,*.bat,loadScript.js,log.js,suggest.js,t.js,ajax.js"/>
+			<folder path="${lckey_publish}\gcc,${lckey_publish}\js\t,${lckey_publish}\js\log,${lckey_publish}\js\AnsycLoad,${lckey_publish}\js\suggest" />
+		</delete>
+	</target>
+	<target note="处理css">		
+		<compress note="压缩css"  executable="java"  dest=""  >
+			<fileset dir="${lckey_publish}\css" includes="*.css" excludes=""/>
+			<arg line="-jar"/>
+			<arg path="${yui}"/>
+			<arg line="--charset utf8"/>
+			<srcfile value=""/>
+			<arg value="-o"/>
+			<mapper type="regexp" from="^(.*)\.css$" to="\1.min.css"/>
+			<targetfile value=""/>
+		</compress>
+		
+		<route destfile="css/index.min.css?t=${ver}" encoding="${charset}" outputencoding="${charset}">
+			<path path="css/index.css"/>
+			<fileset dir="${lckey_publish}" includes="*.html,*.aspx" excludes=""/>
+		</route>
+		<route destfile="css/reset.min.css?t=${ver}" encoding="${charset}" outputencoding="${charset}">
+			<path path="css/reset.css"/>
+			<fileset dir="${lckey_publish}" includes="*.html,*.aspx" excludes=""/>
+		</route>
+		<route destfile="css/reset9.min.css?t=${ver}" encoding="${charset}" outputencoding="${charset}">
+			<path path="css/reset9.css"/>
+			<fileset dir="${lckey_publish}" includes="*.html,*.aspx" excludes=""/>
+		</route>
+		<route destfile="css/suggest.min.css?t=${ver}" encoding="${charset}" outputencoding="${charset}">
+			<path path="css/suggest.css"/>
+			<fileset dir="${lckey_publish}" includes="*.html,*.aspx" excludes=""/>
+		</route>		
+		
+		<delete note="删除css">
+			<fileset dir="${lckey_publish}\css" includes="index.css,reset.css,suggest.css,reset9.css"/>
+		</delete>
+	</target>
+	<target note="ftp">
+		<batch>
+			<path path="${lckey_bats}\ftpwebsite.bat" />
+		</batch>
+	</target>
+</project>
