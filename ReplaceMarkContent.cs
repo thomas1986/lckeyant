@@ -116,6 +116,7 @@ namespace LckeyAnt
 
 		/// <summary>
 		/// 直接替换oldMark为newReplaceContent,用于发布模板页面，只可以替换一次……
+		/// *考虑添加每个替换时的选项，是否替换;或者一次列出所有替换项的周围字符信息
 		/// </summary>
 		/// <param name="sourceContent"></param>
 		/// <param name="oldMark">待替换字符标志，替换后消失</param>

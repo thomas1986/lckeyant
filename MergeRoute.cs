@@ -138,7 +138,7 @@ namespace LckeyAnt
 				repSinglePageMultiItems(currentPage, combineFiles, encoding, outputencoding);
 			}
 		}
-		
+
 		/// <summary>
 		/// 单个页面拆分，多种替换、匹配
 		/// </summary>
@@ -174,7 +174,7 @@ namespace LckeyAnt
 				}
 			}
 		}
-		
+
 		/// <summary>
 		/// 串行替换js,css文件的src,确保不重复
 		/// </summary>
@@ -230,7 +230,7 @@ namespace LckeyAnt
 				*/
 			}
 		}
-		
+
 		/// <summary>
 		/// 根据要route的文件名后缀来确定正则，目前只支持：js,css格式
 		/// </summary>
@@ -347,22 +347,24 @@ namespace LckeyAnt
 
 				while (!streamReader.EndOfStream)//读取文件
                 {
-					string strFileLine = streamReader.ReadLine();
+					string strFileLine = streamReader.ReadToEnd(); //streamReader.ReadLine();
 					string newStr = string.Empty;
 					//对符合当前正则的js名文件进行匹配处理
 					newStr = reg.Replace(strFileLine, new MatchEvaluator(delegate(Match m) {
 						string ret = string.Empty;
 						switch (_doReplace) {
 							case DoReplace.InnerRegex:
-								ret = m.Value.Replace(strOld, strNew).Replace("\t", "");
+								ret = m.Value.Replace(strOld, strNew).Replace("\t", "").Replace("\r\n", " ");
 								replaced = true;
 								//去除本页面其他同名的js
 								_doReplace = DoReplace.Empty;
 								break;
 							case DoReplace.None:
+								//标记第一次匹配到了值，后面的删除
 								//去除本页面其他同名的js
 								_doReplace = DoReplace.Empty;
-								ret = strFileLine.Replace("\t", "");
+								//替换掉多行的script,link中的换行
+								ret = m.Value.Replace("\t", "").Replace("\r\n", " ");
 								break;
 							case DoReplace.Empty:
 								ret = string.Empty;
@@ -372,10 +374,12 @@ namespace LckeyAnt
 						}
 						return ret;
 					}));
-					Regex r = new Regex("^[\\s\\t]*$");
+					//tab占空位
+					/*Regex r = new Regex("^[\\s\\t]*$");
 					if (!r.IsMatch(newStr)) {
 						strFileContent.Append(newStr + "\r\n");
-					}
+					}*/
+					strFileContent.Append(newStr);
 				}
 				streamReader.Close();
 				//把修改过的内容写入文件,此处为修改原页面内容，所以是替换，不是append
@@ -398,8 +402,17 @@ namespace LckeyAnt
 	/// </summary>
 	public enum DoReplace
 	{
+		/// <summary>
+		/// 什么都不替换，返回原始值
+		/// </summary>
 		None = 1,
+		/// <summary>
+		/// 使用正则替换
+		/// </summary>
 		InnerRegex = 2,
+		/// <summary>
+		/// 替换为空值
+		/// </summary>
 		Empty = 3
 	}
 }

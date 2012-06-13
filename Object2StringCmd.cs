@@ -485,7 +485,7 @@ namespace LckeyAnt
  ** 路径：
  *	 路径替换，是否在configAccess.cs还是本cs中执行。。凌乱=>趋向于在configAccess读取时就确定路径，本页面中判断路径文件是否存在
  *	 FileSetList的路径一律在getFilesInDir方法中才替换
- **
+ ** 问题
  * 使用了很多外部变量，在内部替换，，，是否异常下会引起错乱
  * 约束条件判断，是否只在根方法进行，是否在调用处，每次也判断
  * bat执行，cmd执行中发生的错误无法获取
@@ -493,7 +493,15 @@ namespace LckeyAnt
  * 子目录目前全部不去自动包含
  * 添加节点ID，执行时根据依赖关系判断是否发生异常情况下往下执行?
  * msbuild支持
+ * config节点执行添加开始结束log
+ * note注释信息显示到Log
+ * replaceMark替换内容时先列出所有行或者要替换行的文字，然后用户输入判断是否替换,route等也添加选择:yes,no,all
+ * script.src 标签多行的情况下无法替换
  */
+ 
+ /** 已解决、支持
+  *
+  */
 
 /*
   public String substitute(String input, String argument, int options)
