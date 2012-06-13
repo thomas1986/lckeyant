@@ -370,7 +370,6 @@ namespace LckeyAnt
 								ret = string.Empty;
 								break;
 							default: break;
-
 						}
 						return ret;
 					}));
