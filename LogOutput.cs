@@ -53,6 +53,14 @@ namespace LckeyAnt
 			//记录到日志
 			LogCommon.Instance.WriteLine(msgs);
 		}
+		/// <summary>
+		/// 添加当前时间到msg前
+		/// </summary>
+		/// <param name="msg"></param>
+		public static void logNow(string msg) {
+			//记录到日志
+			LogCommon.Instance.WriteLine("[ " + DateTime.Now.ToString() + " ] " + msg);
+		}
 
 		#endregion
 

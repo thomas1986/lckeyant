@@ -30,6 +30,7 @@ namespace LckeyAnt
 				Console.WriteLine("**提示信息：");
 				Console.WriteLine("* 1,使用lckeyant -? 获取提示信息");
 				Console.WriteLine(@"* 2,目录路径中间用空格，则在整个目录加双引号 'C:\documents and settings'\xxx");
+				Console.WriteLine("详细信息请到：http://www.lckey.com/");
 				Console.WriteLine("************************************");
 
 				//RunCommand.callCmdSync(@"G:\ant_test", @"java -jar compiler.jar --js=a.js --js_output_file=a.min.js");

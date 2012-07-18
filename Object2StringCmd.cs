@@ -362,7 +362,7 @@ namespace LckeyAnt
 				foreach (FileInfo fileInfo in fileList) {
 					retFileList.Add(fileInfo);
 					foreach (FileInfo exFileInfo in exFileList) {
-						if (fileInfo.Name == exFileInfo.Name) {
+						if (fileInfo.FullName == exFileInfo.FullName) {//Name=>FullName
 							retFileList.Remove(fileInfo);
 							break;
 						}
@@ -495,9 +495,19 @@ namespace LckeyAnt
  * msbuild支持
  * config节点执行添加开始结束log
  * note注释信息显示到Log
- * replaceMark替换内容时先列出所有行或者要替换行的文字，然后用户输入判断是否替换,route等也添加选择:yes,no,all
+ * ### replaceMark替换内容时先列出所有行或者要替换行的文字，
+ *	   然后用户输入判断是否替换,route等也添加选择:yes,no,all；可以在配置文件配置相关
  * script.src 标签多行的情况下无法替换
+ * 提供script.src节点删除的配置
+ * 提供mark标签替换的正则支持
  */
+ /** 路径
+  * build.xml的路径与处理的内容没有关系，路径都在配置中指明
+  * build.xml的路径可能与系统的处理如 log文件的存放有关系
+  * 如果文件在xml中配置的路径是相对路径，则会使用build.xml的根路径或传入的根路径来combine
+  * 最好将build.xml文件放在当前需要处理文件的相对根目录下
+  * build.xml文件随便命名
+  */
  
  /** 已解决、支持
   *

@@ -177,7 +177,7 @@ namespace LckeyAnt
 
 		#endregion
 
-		#region news copy
+		#region news project copy
 		/// <summary>
 		/// 一次打开文件，替换所有
 		/// </summary>

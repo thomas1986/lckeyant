@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xrml="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <assemblyIdentity name="lckeyAnt.application" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
-  <description asmv2:publisher="lckeyAnt" asmv2:product="lckeyAnt" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <assemblyIdentity name="LckeyAnt.application" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <description asmv2:publisher="LckeyAnt" asmv2:product="LckeyAnt" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true">
     <subscription>
       <update>
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="http://thomas-80d2d667/lckeyAnt/lckeyAnt.application" />
+    <deploymentProvider codebase="http://thomas-80d2d667/lckeyAnt/LckeyAnt.application" />
   </deployment>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="lckeyAnt.exe.manifest" size="3604">
-      <assemblyIdentity name="lckeyAnt.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+    <dependentAssembly dependencyType="install" codebase="LckeyAnt.exe.manifest" size="3604">
+      <assemblyIdentity name="LckeyAnt.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>O+O0egIYiOFiW43lLVZEIk0KhfM=</dsig:DigestValue>
+        <dsig:DigestValue>5a15KhqVYHjxAKCBjAERd2Ln+QU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
